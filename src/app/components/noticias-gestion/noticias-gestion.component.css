@@ -1,0 +1,96 @@
+td{
+    font-size: 14px;
+}
+
+.extracto{
+    width: 50px;
+    overflow-y: scroll;
+}
+
+.tabla {
+    border: 2px solid black;
+}
+
+h2{
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.crearLibro{
+    width: 200px;
+    .botonNebula {
+        background-color: #81689D;
+        border: 0px;
+        color: white;
+        font-weight: 600;
+        transition: 0.4s;
+        font-size: 18px;
+        margin-bottom: 0px;
+        padding: 12px;
+        text-decoration: none;
+    }
+    
+    .botonNebula:hover {
+        transition: 0.4s;
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+.contenedor{
+    margin-top: 8%;
+    margin-left: 14%;
+    margin-right: 14%;
+    margin-bottom: 4%;
+}
+
+.imagenPortada{
+    width: 70px;
+}
+
+.divTabla{
+    text-align: center;
+
+    th{
+        text-align: center;
+        background-color: #19225c;
+        border: solid 1px black;
+        color: white;
+    }
+
+    td{
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.btn-group{
+    display: flex;
+    gap: 7px;
+    .boton{
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contenedor{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 100px;
+
+    }
+
+    .divTabla{
+        margin-left: 0%;
+        margin-right: 0%;
+        text-align: left;
+        
+        .esconder{
+            display: none;
+        }
+
+        .row .mt-2 .justify-content-between{
+            display: flex;
+            border: 1px solid black;
+        }
+    }
+}

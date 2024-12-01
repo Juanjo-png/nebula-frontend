@@ -1,0 +1,83 @@
+<app-header></app-header>
+<div class="cuerpo">
+    <div class="menu">
+        <div class="breadcrumbs">
+            <h5>
+                <a href="#" routerLink="/categoria/{{this.idLibro}}" class="mainBread">{{this.categoria}}</a>
+                > 
+                <a href="#">NOVEDADES</a>
+            </h5>
+            <div class="ver">
+                <h3>NOVEDADES</h3>
+            </div>
+        </div>
+    </div>
+    <div class="novedades">
+        <div class="mes">
+            <div class="tituloMes">
+                <h3>SEPTIEMBRE</h3>
+            </div>
+            <div class="grid">
+                @for (libro of primero; track $index) {
+                    <div class="libro">
+                        <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page" href="#">
+                            <img src="{{libro.portada}}" alt="">
+                        </a>
+                        <div class="detallesLibro">
+                            <div class="titulo">
+                                <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page" href="#">
+                                    <p>{{libro.titulo}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <hr>
+        </div>
+        <div class="mes">
+            <div class="tituloMes">
+                <h3>OCTUBRE</h3>
+            </div>
+            <div class="grid">
+                @for (libro of segundo; track $index) {
+                    <div class="libro">
+                        <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page" href="#">
+                            <img src="{{libro.portada}}" alt="">
+                        </a>
+                        <div class="detallesLibro">
+                            <div class="titulo">
+                                <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page" href="#">
+                                    <p>{{libro.titulo}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <hr>
+        </div>
+        <div class="mes">
+            <div class="tituloMes">
+                <h3>DICIEMBRE</h3>
+            </div>
+            <div class="grid">
+                @for (libro of tercero; track $index) {
+                    <div class="libro">
+                        <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page" href="#">
+                            <img src="{{libro.portada}}" alt="">
+                        </a>
+                        <div class="detallesLibro">
+                            <div class="titulo">
+                                <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page" href="#">
+                                    <p>{{libro.titulo}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

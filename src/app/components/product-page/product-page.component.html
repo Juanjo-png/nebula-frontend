@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="breadcrumbs">
+    <h5>
+        <a href="#" routerLink="/catalogo" class="mainBread">Catalogo</a>
+        > 
+        <a href="#" routerLink="/categoria/{{libro.id_Categoria}}">{{libro.categoria}}</a> 
+        > 
+        <a href="#" routerLink="/serie/{{libro.serie}}">Serie</a> 
+        > 
+        <a href="#" routerLink="/libros/{{libro.id}}">{{libro.titulo}}</a>
+    </h5>
+</div>
+<div class="box">
+    <div class="column">
+        <div class="imagen">
+            <img src="{{libro.portada}}">
+        </div>
+        <div class="datos">
+            <h5>Formato</h5>
+            <p>{{libro.formato}}</p>
+            <h5>ISBN</h5>
+            <p>{{libro.ISBN}}</p>
+            <div class="datos2">
+                <div class="dato3">
+                    <h5>Color</h5>
+                    <p>{{libro.color}}</p>
+                </div>
+                <div class="dato3">
+                    <h5>Páginas</h5>
+                <p>{{libro.paginas}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column2">
+        <div class="sinopsis">
+            <h2>{{libro.titulo}}</h2>
+            <h4>{{libro.precio}}€</h4>
+            <p>{{libro.autor}}</p>
+            <p>{{libro.sinopsis}}</p>
+        </div>
+        <div class="generos">
+            <h3>Etiquetas</h3>
+            <h4>{{libro.etiqueta}}</h4>
+        </div>
+    </div>
+    <div class="column">
+        <div class="precio">
+            <button type="button" (click)="agregarCarrito(libro)" class="btn btn-danger"><i class="bi bi-cart"></i>AÑADIR AL CARRITO</button>
+            @if (libro.avance == 1) {
+                <button type="button" routerLink="/adelanto/{{libro.id}}" class="btn btn-danger"><i class="bi bi-book"></i>LEER AVANCE</button>
+            }
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

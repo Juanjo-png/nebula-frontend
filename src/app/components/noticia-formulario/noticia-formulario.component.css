@@ -1,0 +1,61 @@
+.cuerpo {
+    margin-left: 14%;
+    margin-right: 14%;
+    text-align: left;
+    padding: 30px;
+    padding-top: 0px;
+
+    label {
+        font-weight: 700;
+    }
+
+    .botones {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+.botonNebula {
+    background-color: #81689D;
+    border: 0px;
+    color: white;
+    font-weight: 600;
+    transition: 0.4s;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 320px;
+}
+
+.botonNebula:hover {
+    transition: 0.4s;
+    background-color: rgb(0, 0, 0);
+}
+
+.botonNebulaCancelar {
+    background-color: #919092;
+    border: 0px;
+    color: white;
+    font-weight: 600;
+    transition: 0.4s;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 320px;
+}
+
+.botonNebulaCancelar:hover {
+    transition: 0.4s;
+    background-color: rgb(0, 0, 0);
+}
+
+.botonNebula:disabled {
+    background-color: #525252;
+}
+
+.botonNebula:disabled:hover {
+    background-color: #525252;
+}

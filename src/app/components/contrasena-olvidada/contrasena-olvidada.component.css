@@ -1,0 +1,222 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #efefef;
+    align-items: center;
+    height: 100vh;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: 0px 7px 7px 2px rgba(0, 0, 0, 0.321);
+    h3{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+}
+
+body{
+    background: url("../../../assets/img/otros/background.jfif");
+    background-size: cover;
+}
+
+.imagen{
+    position: absolute;
+    top: 0;
+    right: 0;
+    img{
+        padding: 14px;
+        padding-left: 10px;
+        width: 150px;
+        margin-bottom: 20px;
+    }
+}
+
+.botonVolver{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.body {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+    width: 100%;
+    padding-right: 14%;
+    padding-left: 14%;
+}
+
+.inputBordeUser{
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 18px;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: left;
+    align-items: center;
+    i{
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    input{
+        border: 0;
+        width: 100%;
+    }
+}
+
+.inputBorde{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 18px;
+    display: flex;
+    width: 320px;
+    gap: 15px;
+    justify-content: left;
+    align-items: center;
+    i{
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    input{
+        border: 0;
+        width: 200px;
+    }
+}
+
+.inputContra{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 18px;
+    display: flex;
+    width: 320px;
+    gap: 15px;
+    justify-content: left;
+    align-items: center;
+    i{
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    input{
+        border: 0;
+        
+    }
+}
+
+.contraseñas{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 0px;
+}
+
+.mostrarContra{
+    width: 10px;
+}
+
+input{
+    border: 0;
+}
+
+label{
+    font-weight: 300;
+    color: #868686;
+}
+
+.textoContra{
+    transition: 0.2s;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    color: brown;
+}
+
+.iniciarBoton{
+    background-color: #81689D;
+    border: 0px;
+    color: white;
+    font-weight: 600;
+    transition: 0.4s;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+   }
+
+  .iniciarBoton:hover{
+      transition: 0.4s;
+      background-color: rgb(0, 0, 0);
+  }
+
+  .form-control:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .pregunta{
+    text-align: left;
+    p{
+        font-weight: 600;
+    }
+  }
+
+  .fila{
+    margin-bottom: 30px;
+  }
+
+  .atras{
+    border: 0px;
+    margin-left: 10px;
+    transition: 0.4s;
+    padding-left: 10px;
+    padding-right: 10px;
+    i{
+        font-size: 30px;
+    }
+  }
+
+  .atras:hover{
+    transition: 0.4s;
+    background-color: #d2d1d1;
+  }
+
+  @media (max-width: 700px) {
+    .wrapper{
+        margin-left: 5%;
+        margin-right: 5%;
+
+        .inputContra{
+            width: 100%;
+        }
+
+        .body{
+            margin-left: 10px;
+        }
+
+       
+
+        .contraseñas{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputContra{
+            margin: 0px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    }
+  }

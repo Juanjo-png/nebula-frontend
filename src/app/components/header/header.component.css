@@ -1,0 +1,181 @@
+.barraBusqueda{
+    background-color: #1F2544;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
+    padding: 0px;
+}
+
+*{
+    color: #d0d0d0;
+}
+
+.headerOption{
+    font-weight: 400;
+}
+
+.logo{
+    width: 160px;
+    margin-left: 30px;
+}
+
+a:hover{
+    color: white;
+}
+
+#listaNav{
+    display: flex;
+
+}
+
+.botonNav{
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: 0.5s;
+}
+
+.botonNav:hover{
+    background-color: #2d3560;
+}
+
+.barra{
+    padding: 2px;
+    margin-left: 14%;
+    margin-right: 14%;
+}
+
+.barraOculta{
+    display: none;
+}
+
+.barraMostrar{
+    display: block;
+}
+
+.inputBusqueda{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 15px;
+
+    input {
+        width: 700px;
+        height: 55px;
+        font-size: 20px;
+    }
+}
+
+i{
+    color:rgb(208, 208, 208);
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+i:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+.usuario{
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    transition: 0.2s;
+    display: block;
+    margin-top: 0;
+}
+
+
+.dropdown-menu{
+    background-color: #1F2544;
+    border-radius: 0px;
+    box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.275);
+}
+
+.dropdown-item:hover{
+    transition: 0.3s;
+    background-color: #2d3560;
+}
+
+.usuario{
+    display: flex;
+    gap: 30px;
+    a{
+        text-decoration: none;
+    }
+
+    i{
+        font-size: 35px;
+    }
+}
+
+.carrito{
+    position: relative;
+    .noCarrito{
+        bottom: 0;
+        right: 0;
+        font-weight: 600;
+        font-size: 10px;
+        position: absolute;
+        background-color: green;
+        padding: 5px;
+        padding-left: 9px;
+        padding-right: 8px;
+        border-radius: 50px;
+        transition: 0.4s;
+    }
+    .noCarrito:hover{
+        transition: 0.4s;
+        background-color: rgb(0, 91, 0);
+    }
+    i{
+        margin-right: 5px;
+    }
+}
+
+.responsiveToggler{
+    color: #D0D0D0;
+    border-color: transparent;
+    filter: brightness(550%);
+}
+
+@media (max-width: 700px) {
+    .barraBusqueda{
+        width: 100%;
+    }
+
+    .barra{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 10px;
+        img{
+            width: 150px;
+        }
+        i{
+            font-size: 35px;
+        }
+    }
+
+    .usuario{
+        gap: 20px;
+        padding-left: 20px;
+    }
+}
+
+
+
+
+

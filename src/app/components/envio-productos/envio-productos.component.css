@@ -1,0 +1,97 @@
+td{
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.tabla {
+    border: 2px solid black;
+}
+
+h2{
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.crearLibro{
+    width: 200px;
+    .botonCrear{
+        background-color: #81689D;
+        color: white;
+        font-weight: 600;
+    }
+    .botonCrear:hover{
+        background-color: #472d64;
+    }
+}
+
+.contenedor{
+    margin-top: 8%;
+    margin-left: 14%;
+    margin-right: 14%;
+    margin-bottom: 4%;
+}
+
+.imagenPortada{
+    width: 50px;
+}
+
+.divTabla{
+    text-align: center;
+
+    th{
+        text-align: center;
+        background-color: #19225c;
+        border: solid 1px black;
+        color: white;
+    }
+
+    td{
+        text-align: center;
+        vertical-align: middle;
+    }
+    img{
+        width: 50px;
+    }
+}
+
+.btn-group{
+    display: flex;
+    gap: 7px;
+    .boton{
+        border-radius: 5px;
+    }
+    
+}
+
+@media (max-width: 700px) {
+
+    .contenedor{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 100px;
+
+    }
+
+    .divTabla{
+        margin-left: 0%;
+        margin-right: 0%;
+
+        .esconder{
+            display: none;
+        }
+
+        td{
+            padding: 5px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            font-size: 15px;
+        }
+        th{
+            padding: 5px;
+            font-size: 15px;
+        }
+    }
+}

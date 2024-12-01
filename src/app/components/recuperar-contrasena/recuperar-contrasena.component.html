@@ -1,0 +1,38 @@
+<body>
+  <div class="wrapper">
+    <div class="imagen">
+      <img class="logo" src="../../../assets/img/otros/NebulaLogoBlack.png" alt="img login">
+    </div>        
+    <div class="body">
+      <h3>Actualizar Contraseña</h3>
+      
+      <form [formGroup]="formActualizar" (ngSubmit)="onSubmit()">
+        <div class="contraseñas">
+          <div class="fila">
+            <div class="inputContra">
+              <i class="bi bi-lock"></i>
+              <input type="password" id="inputNuevaContra" class="form-control" placeholder="Nueva Contraseña" formControlName="nuevaContraseña" [type]="passwordVisible ? 'text' : 'password'">
+              <i (click)="mostrarContrasena()" [class]="passwordVisible ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
+            </div>
+          </div>
+          <div class="fila">
+            <div class="inputContra">
+              <i class="bi bi-lock"></i>
+              <input type="password" class="form-control" placeholder="Repetir Contraseña" formControlName="repetirContraseña" [type]="passwordVisible ? 'text' : 'password'">
+              <i (click)="mostrarContrasena()" [class]="passwordVisible ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2 mb-3">
+          <button [disabled]="!formActualizar.valid" type="submit" class="iniciarBoton">Actualizar</button>
+        </div>
+
+        <div class="d-grid gap-2 mb-3 botonVolver">
+          <a routerLink="/home" class="atras"><i class="bi bi-arrow-left"></i></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+

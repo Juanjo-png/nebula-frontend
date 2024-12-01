@@ -1,0 +1,22 @@
+@import 'ngx-toastr/toastr';
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #FBFBFB;
+}
+
+.toast-success {
+    box-shadow: black;
+  }
+
+
+
+

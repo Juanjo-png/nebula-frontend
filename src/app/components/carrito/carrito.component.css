@@ -1,0 +1,229 @@
+.cuerpo{
+    margin-left: 14%;
+    margin-right: 14%;
+    display: flex;
+    margin-bottom: 120px;
+    box-shadow: 0px 0px 25px 6px rgba(200, 200, 200, 0.466);
+    width: max-content;
+    transition: 0.2s;
+
+    img{
+        width: 100px;
+        box-shadow: 0px 7px 5px 0px rgb(148, 148, 148);
+    }
+}
+
+.tabla{
+    tr:not(:last-child){
+        border-bottom: 1px solid rgb(200, 200, 200);
+
+    }
+    td{
+        padding: 15px;
+        font-weight: 600;
+    }
+    th{
+        color: grey;
+        padding: 20px;
+        font-weight: 400;
+    }
+}
+
+.titulo{
+    margin-left: 14%;
+    margin-right: 14%;
+    text-align: left;
+    margin-top: 120px;
+    margin-bottom: 30px;
+
+    p{
+        font-weight: 400;
+    }
+
+    h3{
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+
+.comprar{
+    height: min-content;
+    padding: 30px;
+    background-color: rgb(243, 243, 243);
+    height: auto;
+    text-align: left;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+
+    h3{
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    h4{
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    h5{
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .botones{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.cantidadButton{
+    background-color: rgb(196, 141, 196);
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.cantidadButton:hover{
+    transition: 0.4s;
+    background-color: rgb(148, 79, 148);
+}
+
+i{
+    transition: 0.4s;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+i:hover{
+    transition: 0.4s;
+    padding: 0;
+}
+
+.eliminar{
+    color: #d34444;
+    font-weight: 800;
+    transition: 0.4s;
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    border-radius: 5px;
+
+    i:hover{
+        transition: 0.4s;
+        transform: scale(1.2);
+    }
+}
+
+
+
+.comprarBoton{
+    background-color: #81689D;
+    color: white;
+    font-weight: 600;
+    transition: 0.4s;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 12px;
+}
+
+.comprarBoton:hover{
+    transition: 0.4s;
+    background-color: rgb(0, 0, 0);
+}
+
+.vaciar{
+    background-color: #bb7aa1;
+    color: white;
+    font-weight: 600;
+    transition: 0.4s;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.vaciar:hover{
+    background-color: black;
+    transition: 0.4s;
+}
+
+.vacio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-left: 14%;
+    margin-right: 14%;
+
+    h3{
+        font-weight: 600;
+        font-size: 40px;
+        margin: 10px;
+    }
+
+    p{
+        font-weight: 300;
+    }
+
+    a{
+        text-decoration: none;
+        color: #7e4eb5;
+    }
+
+    img{
+        width: 200px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 700px) {
+    .titulo{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .cuerpo{
+        margin-left: 4%;
+        margin-right: 5%;
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+
+        .tabla{
+            img{
+                width: 40px;
+            }
+
+            td{
+                padding: 5px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                font-weight: 600;
+                font-size: 15px;
+            }
+            th{
+                color: grey;
+                padding: 5px;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+
+        .comprar{
+            width: 100%;
+        }
+    }
+}

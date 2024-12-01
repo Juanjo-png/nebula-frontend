@@ -1,0 +1,249 @@
+.cuerpo {
+    margin-left: 14%;
+    margin-right: 14%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 70px;
+
+    a {
+        color: #7e4eb5;
+    }
+}
+
+.titulo {
+    margin-left: 14%;
+    margin-right: 14%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: left;
+
+    h3 {
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+.iniciarBoton {
+    background-color: #81689D;
+    border: 0px;
+    color: white;
+    font-weight: 600;
+    transition: 0.4s;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding: 12px;
+    width: 45%;
+}
+
+.iniciarBoton:hover {
+    transition: 0.4s;
+    background-color: rgb(0, 0, 0);
+}
+
+.contenido {
+    background-color: #F2F2F2;
+    width: 100%;
+}
+
+.row1 {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+
+    .contenido {
+        padding: 20px;
+    }
+
+    h4 {
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+
+.bloque {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bloque:hover {
+    transition: 0.4s;
+    box-shadow: 0px 0px 18px -1px rgb(155, 155, 155);
+}
+
+.row2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+
+    .bloque {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: min-content;
+
+        img {
+            width: 340px;
+        }
+
+        .contenido {
+            padding: 10px;
+            text-align: left;
+
+            h4 {
+                font-weight: 600;
+            }
+
+            p {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.row3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+
+    .bloque {
+        display: flex;
+        gap: 0px;
+        flex-direction: column;
+        width: min-content;
+
+        img {
+            width: 250px;
+        }
+    }
+
+    .contenido {
+        padding: 10px;
+        text-align: left;
+
+        h4 {
+            font-weight: 600;
+        }
+
+        p {
+            font-weight: 300;
+        }
+    }
+}
+
+.bloque {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+
+    img {
+        width: 600px;
+    }
+}
+
+@media (max-width: 700px) {
+    .titulo{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .cuerpo{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 30px;
+    }
+
+    .row1{
+        .bloque{
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+
+            img{
+                width: 100%;
+            }
+        
+            h4 {
+                font-size: 25px;
+                font-weight: 700;
+            }
+        
+            p {
+                font-size: 15px;
+                font-weight: 300;
+            }
+
+        }
+        
+    }
+
+    .row2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 20px;
+        gap: 20px;
+
+        .bloque{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        
+            h4 {
+                font-size: 25px;
+                font-weight: 700;
+            }
+        
+            p {
+                font-size: 15px;
+                font-weight: 300;
+            }
+
+        }
+    }
+
+    .row3{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 10px;
+        gap: 20px;
+
+        .bloque{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        
+            h4 {
+                font-size: 25px;
+                font-weight: 700;
+            }
+        
+            p {
+                font-size: 15px;
+                font-weight: 300;
+            }
+
+        }
+    }
+
+    .iniciarBoton {
+        margin-top: 0px;
+        width: 100%;
+    }
+}

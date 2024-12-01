@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="container">
+    <div class="titulo">
+        <div class="tituloh1">
+            <i class="bi bi-pencil"></i><h1>Redactar Noticia</h1><i class="bi bi-pencil"></i>
+        </div>
+        <p>Añade una nueva noticia</p>
+    </div>
+    <app-noticia-formulario (submitValues)="onSubmit($event)"></app-noticia-formulario>
+</div>
+<app-footer></app-footer>

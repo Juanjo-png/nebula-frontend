@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="cuerpo">
+    <div class="iconoPerfil">
+        <i class="bi bi-person-circle"></i>
+        <h3>Bienvenido</h3>
+    </div>
+    <hr>
+    <div class="info">
+        <div class="datosUsuario">
+            <div class="data">
+                <h4>Nombre de Usuario</h4>
+                <p>{{this.usuario?.nombre}}</p>
+            </div>
+            <div class="data">
+                <h4>Correo</h4>
+                <p>{{this.usuario?.correo}}</p>
+            </div>
+            <div class="data">
+                <h4>Contraseña</h4>
+                <button type="button" class="boton" routerLink="/recuperar-contraseña/{{this.usuario?.id}}"><i class="bi bi-lock"></i> Editar Contraseña</button>
+            </div>
+            <div class="data">
+                <button type="button" class="boton" routerLink="/usuario-editar/{{this.usuario?.id}}"><i class="bi bi-pencil-square"></i>Editar mis Datos</button>
+            </div>
+            <div class="data">
+                <button type="button" class="boton"  routerLink="/enviosUsuario/{{this.usuario?.id}}"><i class="bi bi-box-seam-fill"></i> Mis Envios</button>
+            </div>
+            <div class="data">
+                <button type="button" class="boton" routerLink="/carrito"><i class="bi bi-cart"></i> Carrito</button>
+            </div>
+        </div>
+        <div class="data">
+            <button type="button" class="boton cerrarSesion" (click)="logout()"><i class="bi bi-box-arrow-right" ></i> Cerrar Sesión</button>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

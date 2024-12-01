@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="titulo">
+    <h3>TODAS LAS NOTICIAS</h3>
+</div>
+<div class="cuerpo">
+    <div class="row3">
+        <div *ngFor="let noticia of noticias | paginate: { itemsPerPage: 30, currentPage: page }">
+                <div class="bloque" routerLink="/noticias/{{noticia.id}}">
+                    <div class="imagen">
+                        <img src="{{noticia.miniatura}}" alt="">
+                    </div>
+                    <div class="contenido">
+                        <h4>{{noticia.titulo}}</h4>
+                        <p>{{noticia.fecha}}</p>
+                    </div>
+                </div>
+        </div>
+    </div>  
+    <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>
+<app-footer></app-footer>

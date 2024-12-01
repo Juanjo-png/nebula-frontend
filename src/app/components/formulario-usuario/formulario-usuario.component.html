@@ -1,0 +1,36 @@
+<body>
+    <div class="wrapper">
+      <div class="imagen">
+        <img class="logo" src="../../../assets/img/otros/NebulaLogoBlack.png" alt="img login">
+      </div>        
+      <div class="body">
+        <h3>Registrar Usuario</h3>
+        
+        <form [formGroup]="formUsuarios" (ngSubmit)="onSubmit()">
+          <div class="fila">
+            <div class="inputBordeUser">
+              <i class="bi bi-person"></i>
+              <input formControlName="nombre" type="text" class="form-control" placeholder="Nombre de Usuario">
+            </div>
+          </div>
+  
+          <div class="fila">
+            <div class="inputBordeUser">
+              <i class="bi bi-envelope"></i>
+              <input formControlName="correo" type="email" class="form-control" placeholder="Correo Electrónico">
+            </div>
+          </div>
+  
+          <div class="d-grid gap-2 mb-3">
+            <button [disabled]="!formUsuarios.valid" type="submit" class="iniciarBoton">Registrar</button>
+          </div>
+  
+          <div class="d-grid gap-2 mb-3 botonVolver">
+            <a routerLink="/userInfo/{{this.idUsuario}}" class="atras"><i class="bi bi-arrow-left"></i></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  
+

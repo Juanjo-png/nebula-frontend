@@ -1,0 +1,38 @@
+.cuerpo{
+    margin-top: 8%;
+    margin-bottom: 50px;
+    margin-left: 14%;
+    margin-right: 14%;
+    text-align: left;
+    height: auto;
+    h4{
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    p{
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+    h2{
+        margin-bottom: 30px;
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    section{
+        padding-bottom: 30px;
+        padding-top: 30px;
+        border-bottom: 1px solid rgb(207, 207, 207);
+    }
+}
+
+@media (max-width: 700px) {
+    .cuerpo {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        padding-bottom: 0px;
+    }
+}

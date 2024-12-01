@@ -1,0 +1,76 @@
+<div class="barraBusqueda">
+<nav class="navbar navbar-expand-lg barra">
+  <a class="navbar-brand" href="#"><img class="logo" src="../../../assets/img/otros/NebulaLogoWhite.png"></a>
+  <button class="navbar-toggler responsiveToggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon responsiveToggler"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav" id="listaNav">
+      <li class="nav-item dropdown botonNav">
+        <a class="nav-link dropdown-toggle headerOption" href="#" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+          {{"Catálogo" | translate}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/categoria/1" href="#">{{"Comic Europeo" | translate}}</a>
+          <a class="dropdown-item" routerLink="/categoria/2" href="#">{{"Manga" | translate}}</a>
+          <a class="dropdown-item" routerLink="/categoria/3" href="#">{{"Comic Estadounidense" | translate}}</a>
+          <a class="dropdown-item" routerLink="/categoria/4" href="#">{{"Libros Ilustrados" | translate}}</a>
+          <a class="dropdown-item" routerLink="/catalogo" href="#">{{"Catálogo Completo" | translate}}</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown botonNav">
+        <a class="nav-link dropdown-toggle headerOption" href="#" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+          {{"Novedades" | translate}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/novedades/1" href="#">{{"Comic Europeo" | translate}}</a>
+          <a class="dropdown-item" routerLink="/novedades/2" href="#">{{"Manga" | translate}}</a>
+          <a class="dropdown-item" routerLink="/novedades/3" href="#">{{"Comic Estadounidense" | translate}}</a>
+          <a class="dropdown-item" routerLink="/novedades/4" href="#">{{"Libros Ilustrados" | translate}}</a>
+        </div>
+      </li>
+      <li class="nav-item botonNav">
+        <a class="nav-link headerOption" href="#" routerLink="/noticias">{{"Noticias" | translate}}</a>
+      </li>
+      @if (this.isAdmin == true) {
+        <li class="nav-item dropdown botonNav">
+          <a class="nav-link dropdown-toggle headerOption" href="#" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+            {{"Gestión" | translate}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLink="/libros-gestion" href="#">{{"Inventario" | translate}}</a>
+            <a class="dropdown-item" routerLink="/envios" href="#">{{"Envios" | translate}}</a>
+            <a class="dropdown-item" routerLink="/noticias-gestion" href="#">{{"Noticias" | translate}}</a>
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+  <div class="usuario">
+    <i [class]="barraVisible ? 'bi bi-x-lg' : 'bi bi-search'" (click)="mostrarBarra()">
+  </i>
+    <a href="#" routerLink="/carrito">
+      <div class="carrito">
+        @if (this.noCarrito != 0) {
+          <h4 class="noCarrito">{{this.noCarrito}}</h4>
+        }
+        <i class="bi bi-bag"></i>
+      </div>
+    </a>
+    @if (this.usuario) {
+      <a href="#" routerLink="/userInfo/{{this.usuario.id}}"><i class="bi bi-person-circle"></i></a>
+    }
+    @else {
+      <div class="pfp">
+        <a href="#" routerLink="/login"><i class="bi bi-person-circle"></i></a>
+      </div>
+    }
+  </div>
+</nav>
+<div class="busqueda barraOculta">
+  <div class="inputBusqueda">
+    <i class="bi bi-search" (click)="buscar()"></i>
+    <input type="text" [(ngModel)]="busqueda"  autocomplete="false" class="form-control" placeholder="Encuentra...">
+  </div>
+</div>
+</div>

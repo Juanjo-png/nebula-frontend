@@ -1,0 +1,32 @@
+<div class="body">
+    <div class="barraBusqueda">
+        <button type="button" class="atras" routerLink="/libros/{{this.idLibro}}"><i class="bi bi-arrow-left"></i></button>
+        <nav class="navbar navbar-expand-lg barra">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" id="listaNav">
+              <li class="nav-item botonNav">
+                <a class="navbar-brand" href="#"><img class="logo" src="../../../assets/img/otros/NebulaLogoWhite.png"></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+    <div class="cuerpo">
+      <div class="imagenes">
+        @for (pagina of paginas; track $index) {
+          <img class="miniatura" src="{{pagina.imagen}}"/>
+        }
+      </div>
+      
+    </div>
+    <div class="detalles">
+
+    </div>
+    <app-footer></app-footer>
+</div>
+
+
+

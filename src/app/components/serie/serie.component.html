@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="cuerpo">
+    <div class="menu">
+        <div class="breadcrumbs">
+            <h5>
+                <a href="#" routerLink="/categoria/{{this.id_Categoria}}" class="mainBread">{{this.nombreCategoria}}</a>
+                > 
+                <a>{{this.nombreSerie}}</a>
+            </h5>
+            <div class="ver">
+                <h3>{{this.nombreSerie}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="gridCatalogo">
+        <div *ngFor="let libro of libros | paginate: { itemsPerPage: 10, currentPage: page }">
+            <div class="libro">
+                <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page"
+                    href="#">
+                    <img src="{{libro.portada}}" alt="">
+                </a>
+                <div class="detallesLibro">
+                    <div class="titulo">
+                        <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item"
+                            aria-current="page" href="#">
+                            <p>{{libro.titulo}}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>
+<app-footer></app-footer>

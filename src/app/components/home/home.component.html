@@ -1,0 +1,175 @@
+<app-header></app-header>
+<div class="carruselBox">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carruselText">
+                <div class="carruselText3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, obcaecati?</p>
+                    <button class="botonDestacado">Leer más</button>
+                </div>
+            </div>
+            <img src="../../../assets/img/otros/2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <div class="carruselText3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, obcaecati?</p>
+                <button class="botonDestacado">Leer más</button>
+            </div>
+            <img src="../../../assets/img/otros/1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <div class="carruselText3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, obcaecati?</p>
+                <button class="botonDestacado">Leer más</button>
+            </div>
+            <img src="../../../assets/img/otros/3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="cuerpo">
+    <div class="catalogo">
+        <h3>{{"Novedades Recientes" | translate}}</h3>
+        <div class="bloque">
+            @for (libro of libros; track $index) {
+                    <div class="libro">
+                        <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page" href="#">
+                            <img src="{{libro.portada}}" class="imagenLibro">
+                        </a>
+                        <div class="detallesLibro">
+                            <div class="titulo">
+                                <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page" href="#">
+                                    <h4>{{libro.titulo}}</h4>
+                                </a>
+                            </div>
+                            <div class="comprar">
+                                <h6>{{libro.precio}}€</h6>
+                                @if (usuario) {
+                                    <button type="button" class="botonCarrito" (click)="agregarCarrito(libro)">Añadir al carrito</button>
+                                }
+                                @else {
+                                    <button type="button" class="botonCarrito" routerLink="/login">Añadir al carrito</button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+            }
+        </div>
+    </div>
+    <div class="novedades">
+        <div class="colNov1">
+            <div class="novedad" routerLink="/series/2">
+                <div class="imagenNoti">
+                    <img src="../../../assets/img/otros/Novedad2.jpg" alt="">
+                </div>
+                <div class="textoNov1">
+                    <h3>SCOTT PILGRIM</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolore aliquam aspernatur excepturi qui illum, odit deleniti soluta illo consequuntur?</p>
+                </div>
+            </div>
+        </div>
+        <div class="colNov2">
+            <div class="novedad" routerLink="/series/2">
+                <div class="imagenNoti2">
+                    <img src="../../../assets/img/otros/Novedad1.jpg" alt="">
+                </div>
+                <div class="textoNov2">
+                    <h3>DANDADAN</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut odio quo corrupti harum itaque consectetur quasi inventore aliquid est saepe.</p>
+                </div>
+            </div>
+            <div class="novedad" routerLink="/series/2">
+                <div class="imagenNoti2">
+                    <img src="../../../assets/img/otros/Novedad3.jpg" alt="">
+                </div>
+                <div class="textoNov3">
+                    <h3>FULL METAL ALCHEMIST BROTHERHOOD</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aperiam iste distinctio corrupti totam odit quibusdam in rem, enim fuga!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="noticias">
+        <div class="tituloNoticias">
+            <h2>{{"Últimas Noticias" | translate}}</h2>
+            <p>{{"Mantente al día de las últimas licencias y novedades de nuestro catálogo." | translate}}</p>
+        </div>
+        <div class="cuerpoNoticias">
+            <div class="noticia">
+                <img src="{{this.noticias[0].miniatura}}" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
+                <div class="textoNoticias">
+                    <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
+                    <a routerLink="/noticias/{{this.noticias[0].id}}">Leer mas →</a>
+                </div>
+            </div>
+            <div class="noticia">
+                <img src="{{this.noticias[0].miniatura}}" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
+                <div class="textoNoticias">
+                    <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
+                    <a routerLink="/noticias/{{this.noticias[0].id}}">Leer mas →</a>
+                </div>
+            </div>
+            <div class="noticia">
+                <img src="{{this.noticias[0].miniatura}}" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
+                <div class="textoNoticias">
+                    <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
+                    <a routerLink="/noticias/{{this.noticias[0].id}}">Leer mas →</a>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+<div class="resaltados">
+    <div class="destacado">
+        <img src="../../../assets/img/otros/destacado1.jpg">
+        <div class="destacadoTitle">
+            <h3>Titulo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Sequi quis ea ullam voluptates ipsa doloribus 
+                reiciendis molestias consectetur praesentium a.
+                Lorem ipsum dolor sit amet consectetur.
+            </p>
+            <button class="botonDestacado">Leer más</button>
+        </div>
+    </div>
+    <div class="destacado">
+        <div class="destacadoTitle2">
+            <h3>Titulo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Sequi quis ea ullam voluptates ipsa doloribus 
+                reiciendis molestias consectetur praesentium a.
+                Lorem ipsum dolor sit amet consectetur.
+            </p>
+            <button class="botonDestacado">Leer más</button>
+        </div>
+        <img src="../../../assets/img/otros/destacado2.jpg">
+    </div>
+    <div class="destacado">
+        <img src="../../../assets/img/otros/destacado3.jpg">
+        <div class="destacadoTitle3">
+            <h3>Titulo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Sequi quis ea ullam voluptates ipsa doloribus 
+                reiciendis molestias consectetur praesentium a.
+                Lorem ipsum dolor sit amet consectetur.
+            </p>
+            <button class="botonDestacado">Leer más</button>
+        </div>
+    </div>
+</div> 
+<app-footer></app-footer>
+
+

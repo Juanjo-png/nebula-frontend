@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="card"><h1>Editar Libro</h1></div>
+<div class="container">
+    <div class="titulo">
+        <div class="tituloh1">
+            <i class="bi bi-newspaper"></i><h1>Editar Noticia</h1><i class="bi bi-newspaper"></i>
+        </div>
+        <p>Modifica la noticia seleccionada</p>
+    </div>
+    <app-noticia-formulario
+            *ngIf = "model"
+            [modelNoticia]="model"
+            (submitValues)="onSubmit($event)"
+        ></app-noticia-formulario>
+</div>
+<app-footer></app-footer>
+

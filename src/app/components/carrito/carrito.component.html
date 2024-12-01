@@ -1,0 +1,55 @@
+<app-header></app-header>
+@if (this.noItems == 0) {
+    <div class="titulo">
+        <h3>Carrito</h3>
+        <p>{{this.noItems}} productos en el carrito</p>
+    </div>
+    <div class="vacio">
+        <img src="../../../assets/img/otros/SadCart.png" alt="">
+        <h3>El carrito está vacio</h3>
+        <p>Parece que no tienes ningún producto en tu carrito. <br> Haz click <a href="#" routerLink="/catalogo">aquí</a> para ver nuestra seleccion!!</p>
+    </div>
+}
+@else {
+    <div class="titulo">
+        <h3>Carrito</h3>
+        <p>{{this.noItems}} productos en el carrito</p>
+    </div>
+    <div class="cuerpo">
+        <table class="tabla">
+            <tr>
+                <th>Producto</th>
+                <th>Título</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th>Eliminar</th>
+            </tr>
+            <tr *ngFor="let item of listaItemsCarrito; let i = index">
+                <td><img [src]="item.portada" alt=""></td>
+                <td>{{ item.titulo }}</td>
+                <td>{{ item.precio }}€</td>
+                <td class="cantidad">
+                    <button type="button" class="cantidadButton" (click)="cambiarCantidad(i, -1)">-</button>
+                    {{ item.cantidad }}
+                    <button type="button" class="cantidadButton" (click)="cambiarCantidad(i, 1)">+</button>
+                </td>
+                <td class="subtotal">{{ (item.precio * item.cantidad).toFixed(2) }}€</td>
+                <td><i class="bi bi-x-lg eliminar"  (click)="eliminarProducto(i)"></i></td>
+            </tr>
+        </table>
+        <div class="comprar">
+            <h3>Resumen del Pedido</h3>
+            <hr>
+            <h4>Nº de Items: {{this.noItems}}</h4>
+            <hr>
+            <h5>Coste Total: {{ total }}€</h5>
+            <div class="botones">
+                <button type="button" class="btn comprarBoton" (click)="generarOrdenPago()">Proceder al Pago</button>
+                <button type="button" class="btn vaciar" (click)="vaciarCarrito()">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>    
+}
+
+

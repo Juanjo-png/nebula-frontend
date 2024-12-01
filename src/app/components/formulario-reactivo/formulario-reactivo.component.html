@@ -1,0 +1,96 @@
+<div class="cuerpo">
+    <form [formGroup]="formLibros" (ngSubmit)="onSubmit()" class="mt-5">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Título</label>
+            <div class="col-sm-10">
+                <input formControlName="titulo" type="text" class="form-control" placeholder="Título del libro">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Categoría</label>
+            <div class="col-sm-10">
+                <select formControlName="categoria" class="form-control" (select)="2">
+                    <option value="">Selecciona una categoría...</option>
+                    @for (categoria of categorias; track $index) {
+                        <option value="{{categoria.id}}">{{categoria.nombre}}</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Etiqueta</label>
+            <div class="col-sm-10">
+                <select formControlName="etiqueta" class="form-control">
+                    <option value="">Selecciona una etiqueta...</option>
+                    @for (etiqueta of etiquetas; track $index) {
+                        <option value="{{etiqueta.id}}">{{etiqueta.nombre}}</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Precio</label>
+            <div class="col-sm-10">
+                <input formControlName="precio" type="number" class="form-control" placeholder="Precio del producto...">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">ISBN</label>
+            <div class="col-sm-10">
+                <input formControlName="ISBN" type="text" class="form-control" placeholder="ISBN del libro...">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Formato</label>
+            <div class="col-sm-10">
+                <input formControlName="formato" type="text" class="form-control" placeholder="Formato del libro...">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Páginas</label>
+            <div class="col-sm-10">
+                <input formControlName="paginas" type="number" class="form-control" min="1" placeholder="Páginas del libro...">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Color</label>
+            <div class="col-sm-10">
+                <input formControlName="color" type="text" class="form-control" placeholder="Color...">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Autor</label>
+            <div class="col-sm-10">
+                <input formControlName="autor" type="text" class="form-control" placeholder="Autor del libro...">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Sinopsis</label>
+            <div class="col-sm-10">
+                <textarea cols="30" rows="8" formControlName="sinopsis" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Serie</label>
+            <div class="col-sm-10">
+                <select formControlName="serie" class="form-control" (select)="2">
+                    <option value="">Selecciona una serie...</option>
+                    @for (serie of series; track $index) {
+                        <option value="{{serie.id}}">{{serie.nombre}}</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Portada</label>
+            <div class="col-sm-10">
+                <input formControlName="portada" type="text" class="form-control" placeholder="Introduce la ruta de la imagen...">
+            </div>
+        </div>
+        <div class="botones">
+            <button [disabled]="!formLibros.valid" type="submit" class="botonAceptar">Aceptar</button>
+            <button  routerLink="/libros-gestion" class="botonCancelar">Cancelar</button>
+        </div>
+    </form>
+</div>
+

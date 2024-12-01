@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="cuerpo">
+    <div class="titulo">
+        <h3>Mis Envios</h3>
+    </div>
+    <div class="divTabla">
+        <table class="table table-hover table-striped table-bordered dt-responsive nowrap" datatable [dtOptions]="dtoptions" [dtTrigger]="dttrigger">
+            <thead>
+                <tr class="table-info">
+                    <th>Productos</th>
+                    <th>ID Envio</th>
+                    <th>Dirección</th>
+                    <th>Estado</th>
+                    <th>Cancelar</th>
+                </tr>
+            </thead>
+            <tbody>
+              @for (envio of envios; track $index) {
+                <tr>
+                    <td>
+                      <button class="btn btn-primary boton" routerLink="/envios/{{envio.id}}">
+                        <i class="bi bi-box-seam-fill"></i>
+                      </button>
+                    </td>
+                    <td>{{ envio.nombre }}</td>
+                    <td>{{ envio.direccion }}</td>
+                    <td>{{ envio.estado }}</td>
+                <td>
+                  <div class="btn-group">
+                    <button (click)="delete(envio.id, $index)" class="btn btn-danger boton">
+                      <i class="bi bi-trash-fill"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="contenedor">
+    <div class="mt-4">
+      <h2>Productos del envio</h2>
+    </div>
+    <div class="divTabla">
+      <table class="table table-hover table-striped table-bordered dt-responsive nowrap" datatable [dtOptions]="dtoptions" [dtTrigger]="dttrigger">
+        <thead>
+            <tr class="table-info">
+                <th>Producto</th>
+                <th>Título</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+          @for (libro of libros; track $index) {
+            <tr>
+                <td>
+                  <a href="#" routerLink="/libros/{{libro.id}}"><img [src]="libro.portada" alt=""></a>
+                </td>
+                <td><a href="#" routerLink="/libros/{{libro.id}}">{{ libro.titulo }}</a></td>
+                <td>{{ libro.cantidad }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<div class="checkout">
+  <div class="checkout-in">
+    <div class="titulo">
+      <h3>INFORMACIÓN DEL PAGO</h3>
+      <p>Rellena los campos para proceder con el pago</p>
+    </div>
+    <div class="divPagos">
+      <form action="" [formGroup]="form" (submit)="initPay()">
+        <div class="input-amount">
+          <p>Cantidad a Pagar</p>
+          <input type="text" readonly formControlName="amount" placeholder="0.00" class="inputCantidad">
+          <span class="currency">€</span>
+        </div>
+        <hr>
+        <div class="input">
+          <label class="col-sm-2 col-form-label">Dirección</label>
+          <div class="">
+            <input formControlName="direccion" type="text" class="form-control" placeholder="Dirección del Envío..." id="direccion">
+          </div>
+        </div>        
+        <div class="input">
+          <label class="label">Número de tarjeta</label>
+          <div id="card"></div>
+        </div>
+        <div class="input">
+          <label class="label">CVC</label>
+          <div id="cvc"></div>
+        </div>
+        <div class="input">
+          <label class="label">Fecha de vencimiento</label>
+          <div id="exp"></div>
+        </div>
+        <div class="botones">
+          <button [disabled]="form.invalid || form.disabled" class="comprarBoton" type="submit">Pagar</button>
+          <button class="cancelarBoton" type="button" routerLink="/carrito">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

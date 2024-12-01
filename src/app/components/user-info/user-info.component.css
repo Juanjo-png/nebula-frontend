@@ -1,0 +1,154 @@
+.cuerpo {
+    margin-left: 14%;
+    margin-right: 14%;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .iconoPerfil {
+        text-align: center;
+        margin-bottom: 30px;
+
+        h3 {
+            font-weight: 700;
+            font-size: 50px;
+        }
+    }
+
+    .info {
+        margin-top: 30px;
+
+        hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .data {
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-weight: 600;
+        }
+
+        p {
+            font-weight: 300;
+        }
+    }
+
+    i {
+        color: black;
+        font-size: 150px;
+    }
+
+    .datosUsuario {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 40px;
+        margin-bottom: 40px;
+    }
+
+}
+
+.boton {
+    background-color: #81689D;
+    border: 0px;
+    color: white;
+    font-weight: 600;
+    transition: 0.4s;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 310px;
+    font-weight: 600;
+    align-items: center;
+
+    i {
+        font-size: 25px;
+        color: white;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+}
+
+.boton:hover {
+    transition: 0.4s;
+    background-color: rgb(0, 0, 0);
+}
+
+.cerrarSesion{
+    background-color: rgb(235, 79, 79);
+}
+
+@media (max-width: 700px) {
+    .cuerpo {
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    
+        .iconoPerfil {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .info {
+            margin-top: 30px;
+    
+            hr {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+    
+            .data {
+                margin-bottom: 0px;
+            }
+    
+            h4 {
+                font-weight: 600;
+            }
+    
+            p {
+                font-weight: 300;
+            }
+        }
+    
+        i {
+            color: black;
+            font-size: 150px;
+        }
+    
+        .datosUsuario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .boton {
+            font-size: 18px;
+            margin-bottom: 0px;
+            padding: 12px;
+            width: 450px;
+            font-weight: 600;
+            align-items: center;
+            justify-content: center;
+        
+            i {
+                font-size: 35px;
+                color: white;
+                font-weight: 700;
+                margin-right: 10px;
+            }
+        }
+    
+    }
+}

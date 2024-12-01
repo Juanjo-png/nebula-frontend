@@ -1,0 +1,29 @@
+<div class="cuerpo">
+    <div class="wrapper">
+        <div class="imagen"><img class="logo" src="../../../assets/img/otros/NebulaLogoBlack.png" alt="img login"></div>
+        <div class="body">
+            <h3 class="mb-2">Inicia Sesión</h3>
+            <div class="inputBordeUser">
+                <i class="bi bi-person"></i><input type="text"  autocomplete="false" class="form-control" placeholder="Ingrese usuario" [(ngModel)]="nombre">
+            </div>
+            <div class="form-floating mb-3">
+                <div class="inputBorde">
+                    <i class="bi bi-lock"></i><input type="password"  autocomplete="false" class="form-control" placeholder="Ingrese contraseña" [(ngModel)]="contrasena" [type]="passwordVisible ? 'text' : 'password'">
+                    <i (click)="mostrarContrasena()" [class]="passwordVisible ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="button" class="iniciarBoton" (click)="login()">Aceptar</button>
+            </div>
+            <div class="d-grid gap-2">
+                <a href="#" routerLink="/contraseña-olvidada">¿Has olvidado tu contraseña?</a>
+            </div>
+        </div>
+    </div>
+    <div class="aside">
+        <h3>¿Eres nuevo?</h3>
+        <p>Registrate y accede a nuestros productos y a una gran variedad de servicios</p>
+        <button type="button" class="iniciarBoton" routerLink="/register">Registrate</button>
+    </div>
+</div>
+

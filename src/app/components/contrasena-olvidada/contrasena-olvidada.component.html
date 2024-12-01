@@ -1,0 +1,28 @@
+<body>
+    <div class="wrapper">
+        <div class="body">
+            <h3>Recuperar Contraseña</h3>
+            <div class="fila">
+                <div class="inputBordeUser">
+                    <i class="bi bi-person"></i><input type="text"  autocomplete="false" class="form-control" placeholder="Ingrese usuario" [(ngModel)]="nombre">
+                </div>
+            </div>
+            <div class="fila pregunta">
+                <div class="title"><p>Pregunta de seguridad</p></div>
+                <div class="inputBordeUser">
+                    <i class="bi bi-key"></i><input type="password"  autocomplete="false" class="form-control" placeholder="¿Cómo se llamaba su primer amigo de la infancia?
+                    " [(ngModel)]="preguntaSeguridad" [type]="passwordVisible ? 'text' : 'password'">
+                    <i (click)="mostrarContrasena()" [class]="passwordVisible ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="button" class="iniciarBoton" (click)="comprobarPregunta()">Aceptar</button>
+            </div>
+            <div class="d-grid gap-2 mb-3 botonVolver">
+                <button type="button" routerLink="/login" class="atras"><i class="bi bi-arrow-left"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+

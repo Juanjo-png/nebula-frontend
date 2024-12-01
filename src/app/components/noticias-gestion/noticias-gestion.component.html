@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="contenedor">
+    <div class="mt-4">
+      <h2>Gestión de Noticias</h2>
+    </div>
+    <div class="d-grid gap-2 crearLibro">
+      <a routerLink="/noticia-crear" class="botonNebula" type="button" href="#">Añadir Noticia</a>
+    </div>
+    <div class="divTabla">
+      <table class="table table-hover table-striped table-bordered dt-responsive nowrap" datatable [dtOptions]="dtoptions" [dtTrigger]="dttrigger" >
+        <thead>
+          <tr class="table-info">
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Fecha</th>
+            <th>Miniatura</th>
+            <th>Gestión</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (noticia of noticias; track $index) {
+            <tr>
+            <td>{{ noticia.titulo }}</td>
+            <td>{{ noticia.autor }}</td>
+            <td>{{ noticia.fecha }}</td>
+            <td><img [src]="noticia.miniatura" alt="Portada" class="imagenPortada"></td>
+            <td>
+              <div class="btn-group">
+                <button routerLink="/noticia-editar/{{noticia.id}}" class="btn btn-primary boton">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button (click)="delete(noticia.id, $index)" class="btn btn-danger boton">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+</div>
+<app-footer></app-footer>
+

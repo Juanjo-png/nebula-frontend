@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div class="titulo">
+    <h4>ACTUALIDAD</h4>
+</div>
+<div class="cuerpo" [innerHTML]="this.noticia.contenido">
+</div>
+<div class="autor">
+    <p>{{this.noticia.autor}} - {{this.noticia.fecha}}</p>
+</div>
+<app-footer></app-footer>

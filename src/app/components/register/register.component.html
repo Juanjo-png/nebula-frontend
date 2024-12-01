@@ -1,0 +1,43 @@
+<body>
+    <div class="wrapper">
+        <div class="imagen"><img class="logo" src="../../../assets/img/otros/NebulaLogoBlack.png" alt="img login"></div>        
+        <div class="body">
+            <h3>Registrar Usuario</h3>
+            <div class="fila">
+                <div class="inputBordeUser">
+                    <i class="bi bi-person"></i><input type="text" id="inputUsu" class="form-control" placeholder="Nombre de Usuario" [(ngModel)]="nombre">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="inputBordeUser">
+                    <i class="bi bi-envelope"></i><input type="text" class="form-control" placeholder="Dirección de correo" [(ngModel)]="correo">
+                </div>
+            </div>
+            <div class="contraseñas">
+                <div class="fila">
+                    <div class="inputContra">
+                        <i class="bi bi-lock"></i><input type="password" id="inputContra" class="form-control" placeholder="Contraseña" [(ngModel)]="contrasena" [type]="passwordVisible ? 'text' : 'password'">
+                        <i (click)="mostrarContrasena()" [class]="passwordVisible ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="inputContra">
+                        <i class="bi bi-lock"></i><input type="password"  class="form-control" placeholder="Repetir Contraseña" [(ngModel)]="confirmarContra">
+                    </div>
+                </div>
+            </div>
+            <div class="fila pregunta">
+                <p>Pregunta de Seguridad</p>
+                <div class="inputBordeUser">
+                    <i class="bi bi-key"></i><input type="password"  class="form-control preguntaSeguridadInput" placeholder="¿Cual fue tu primer amigo de la infancia?" [(ngModel)]="preguntaSeguridad">
+                </div>
+            </div>
+            <div class="d-grid gap-2 mb-3">
+                <button type="button" (click)="addUsu()" class="iniciarBoton">Registrarse</button>
+            </div>
+            <div class="d-grid gap-2 mb-3 botonVolver">
+                <button type="button" routerLink="/login" class="atras"><i class="bi bi-arrow-left"></i></button>
+            </div>
+        </div>
+    </div>
+</body>

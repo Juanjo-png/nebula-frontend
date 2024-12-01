@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="card"><h1>Editar Libro</h1></div>
+<div class="container">
+    <div class="titulo">
+        <div class="tituloh1">
+            <i class="bi bi-book-half"></i><h1>Editar Libro</h1><i class="bi bi-book-half"></i>
+        </div>
+        <p>Modifica el libro seleccionado</p>
+    </div>
+    <app-formulario-reactivo
+            *ngIf = "model"
+            [modelLibro]="model"
+            (submitValues)="onSubmit($event)"
+        ></app-formulario-reactivo>
+</div>
+<app-footer></app-footer>
+

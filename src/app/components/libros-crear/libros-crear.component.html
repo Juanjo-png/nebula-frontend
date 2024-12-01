@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="container">
+    <div class="titulo">
+        <div class="tituloh1">
+            <i class="bi bi-book"></i><h1>Crear Libro</h1><i class="bi bi-book"></i>
+        </div>
+        
+        <p>Añade un nuevo libro al catálogo</p>
+    </div>
+    <app-formulario-reactivo (submitValues)="onSubmit($event)"></app-formulario-reactivo>
+</div>
+<app-footer></app-footer>
