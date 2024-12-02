@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav" id="listaNav">
       <li class="nav-item dropdown botonNav">
-        <a class="nav-link dropdown-toggle headerOption" href="#" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle headerOption" href="#" data-toggle="dropdown" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
           {{"Catálogo" | translate}}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -19,7 +19,7 @@
         </div>
       </li>
       <li class="nav-item dropdown botonNav">
-        <a class="nav-link dropdown-toggle headerOption" href="#" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle headerOption" href="#" id="navbarDropdownMenuLink" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {{"Novedades" | translate}}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -30,11 +30,11 @@
         </div>
       </li>
       <li class="nav-item botonNav">
-        <a class="nav-link headerOption" href="#" routerLink="/noticias">{{"Noticias" | translate}}</a>
+        <a class="nav-link headerOption" href="#" data-toggle="dropdown" routerLink="/noticias">{{"Noticias" | translate}}</a>
       </li>
       @if (this.isAdmin == true) {
         <li class="nav-item dropdown botonNav">
-          <a class="nav-link dropdown-toggle headerOption" href="#" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle headerOption" data-toggle="dropdown" href="#" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
             {{"Gestión" | translate}}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -70,7 +70,7 @@
 <div class="busqueda barraOculta">
   <div class="inputBusqueda">
     <i class="bi bi-search" (click)="buscar()"></i>
-    <input type="text" [(ngModel)]="busqueda"  autocomplete="false" class="form-control" placeholder="Encuentra...">
+    <input type="text" [(ngModel)]="busqueda"  autocomplete="false" class="form-control" placeholder="Encuentra..." (keydown.enter)="buscar()">
   </div>
 </div>
 </div>

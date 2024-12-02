@@ -1,18 +1,29 @@
 <footer>
-    <div class="footCol">
+    <div class="footCol copyright">
         <img class="logo" src="../../../assets/img/otros/NebulaLogoWhite.png" alt="">
-        <p>All content copyright © & Trademarked of their respective owners. All rights reserved.</p>
+        <p>{{"Todo el contenido tiene derechos de autor © y marcas registradas de sus respectivos dueños. Reservados todos los derechos." | translate}}</p>
     </div>
     <div class="footCol">
-        <a href="#" routerLink="/aviso-legal"><p>Aviso Legal</p></a>
-        <p>Privacidad y Cookies</p>
-        <a href="#" routerLink="/politica-privacidad"><p>Política de Privacidad</p></a>
-        <p>Formas de pago</p>
+        <a href="#" routerLink="/aviso-legal"><p>{{"Aviso Legal" | translate}}</p></a>
+        <p>{{"Privacidad y Cookies" | translate}}</p>
+        <a href="#" routerLink="/politica-privacidad"><p>{{"Política de Privacidad" | translate}}</p></a>
+        <a href="#" routerLink="/formas-pago"><p>{{"Formas de pago" | translate}}</p></a>
     </div>
     <div class="footCol">
-        <p>Contacto</p>
-        <p>Siguenos</p>
-        <p>Blog</p>
-        <p><img (click)="switchLanguage('en')" class="bandera" src="../../../assets/img/otros/UK.png" alt=""><img (click)="switchLanguage('es')" class="bandera" src="../../../assets/img/otros/SPAIN.webp" alt=""></p>
+        <p>{{"Contacto" | translate}}</p>
+        <div class="banderas">
+            <p><img (click)="switchLanguage('en')" class="bandera" src="../../../assets/img/otros/UK.png" alt=""></p>
+            <p><img (click)="switchLanguage('es')" class="bandera" src="../../../assets/img/otros/SPAIN.webp" alt=""></p>
+        </div>
+    </div>
+    <div class="footCol">
+        <div class="redes">
+            <a href=""><i class="bi bi-instagram iconoRedes"></i></a>
+            <a href=""><i class="bi bi-linkedin iconoRedes"></i></a>
+            <a href=""><i class="bi bi-youtube iconoRedes"></i></a>
+            <a href=""><i class="bi bi-twitter-x iconoRedes"></i></a>
+            <a href=""><i class="bi bi-facebook iconoRedes"></i></a>
+            <a href=""><i class="bi bi-tiktok iconoRedes"></i></a>
+        </div>
     </div>
 </footer>

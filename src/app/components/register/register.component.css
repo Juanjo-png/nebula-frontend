@@ -196,7 +196,8 @@ label {
     background-color: #d2d1d1;
 }
 
-@media (max-width: 700px) {
+
+@media (max-width: 768px) {
     .body{
         margin-top: 80px;
     }
@@ -238,3 +239,9 @@ label {
         }
     }
   }
+
+  @media (max-width: 576px) {
+    .wrapper{
+        margin: 0%;
+    }
+}

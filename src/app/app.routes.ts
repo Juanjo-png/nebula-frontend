@@ -130,6 +130,10 @@ export const routes: Routes = [
         loadComponent: () => import('./components/noticia-editar/noticia-editar.component').then(m => m.NoticiaEditarComponent)
     },
     {
+        path: 'formas-pago',
+        loadComponent: () => import('./components/formas-pago/formas-pago.component').then(m => m.FormasPagoComponent)
+    },
+    {
         path:'',
         redirectTo: '/home',
         pathMatch: 'full'

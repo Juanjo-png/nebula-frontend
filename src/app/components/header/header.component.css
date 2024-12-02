@@ -27,9 +27,8 @@ a:hover{
     color: white;
 }
 
-#listaNav{
-    display: flex;
-
+.nav-link:focus, .nav-link:hover{
+    color: white;
 }
 
 .botonNav{
@@ -66,7 +65,11 @@ a:hover{
     input {
         width: 700px;
         height: 55px;
-        font-size: 20px;
+        font-size: 20px;    
+    }
+
+    i{
+        margin-right: 12px;
     }
 }
 
@@ -85,12 +88,6 @@ i:hover{
     display: flex;
     gap: 20px;
     margin-right: 20px;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-    transition: 0.2s;
-    display: block;
-    margin-top: 0;
 }
 
 
@@ -154,24 +151,39 @@ i:hover{
 
     .barra{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        gap: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
+        gap: 0px;
+
         img{
             width: 150px;
+            margin-left: 0px;
+            margin-right: 58px;
         }
         i{
             font-size: 35px;
         }
     }
+    
+   
+
+    .navbar-brand {
+        order: 2; /* El logo será el segundo elemento */
+    }
+
+    .navbar-toggler {
+        order: 3;
+    }
 
     .usuario{
-        gap: 20px;
-        padding-left: 20px;
+        gap: 15px;
+        padding-left: 8px;
+
+        i{
+            font-size: 25px;
+        }
     }
 }
 

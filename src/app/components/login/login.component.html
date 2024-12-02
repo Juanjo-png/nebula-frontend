@@ -12,7 +12,7 @@
                     <i (click)="mostrarContrasena()" [class]="passwordVisible ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
                 </div>
             </div>
-            <div class="d-grid gap-2">
+            <div class="d-grid gap-2 botonDiv">
                 <button type="button" class="iniciarBoton" (click)="login()">Aceptar</button>
             </div>
             <div class="d-grid gap-2">
@@ -23,7 +23,7 @@
     <div class="aside">
         <h3>¿Eres nuevo?</h3>
         <p>Registrate y accede a nuestros productos y a una gran variedad de servicios</p>
-        <button type="button" class="iniciarBoton" routerLink="/register">Registrate</button>
+        <button type="button" class="iniciarBoton registerButton" routerLink="/register">Registrate</button>
     </div>
 </div>
 
