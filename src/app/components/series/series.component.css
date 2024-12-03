@@ -96,6 +96,16 @@
             transition: 0.4s;
             box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
         }
+        .detallesLibro{
+            .titulo{
+                a{
+                    width: 100%;
+                    word-wrap: break-word;  
+                    white-space: normal;
+                }
+                
+            }
+        }
     }
 }
 
@@ -122,6 +132,16 @@
             width: 200px;
             transition: 0.4s;
             box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
+        }
+        .detallesLibro{
+            .titulo{
+                a{
+                    width: 100%;
+                    word-wrap: break-word;  
+                    white-space: normal;
+                }
+                
+            }
         }
     }
 }
@@ -150,6 +170,18 @@
             transition: 0.4s;
             box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
         }
+        .detallesLibro{
+            .titulo{
+                a{
+                    width: 100%;
+                    word-wrap: break-word;  
+                    white-space: normal;
+                }
+                
+            }
+        }
     }
 }
+
+
 
