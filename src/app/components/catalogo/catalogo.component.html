@@ -33,6 +33,6 @@
             </div>
         </div>
     </div>
-    <pagination-controls (pageChange)="page = $event" previousLabel="{{'Anterior' | translate}}" nextLabel="{{'Siguiente' | translate}}"></pagination-controls>
+    <pagination-controls (pageChange)="onPageChange($event)"  previousLabel="{{'Anterior' | translate}}" nextLabel="{{'Siguiente' | translate}}"></pagination-controls>
 </div>
 <app-footer></app-footer>

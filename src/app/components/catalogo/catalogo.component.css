@@ -87,7 +87,38 @@
     background-color: rgb(231, 231, 231);
 }
 
-@media (max-width: 700px) {
+/*Telefonos Moviles*/
+@media only screen and (max-width: 575px){
+    .cuerpo{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .gridCatalogo{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 50px;
+        height: auto;
+        margin-bottom: 30px;
+        gap: 50px;
+    }
+
+    .libro{
+        transition: 0.3s;
+        p{
+            font-size: 25px;
+        }
+        img{
+            width: 350px;
+            transition: 0.4s;
+            box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
+        }
+    }
+}
+
+/*Tablets*/
+@media only screen and (min-width: 576px) and (max-width: 767px){
     .cuerpo{
         margin-left: 5%;
         margin-right: 5%;
@@ -96,6 +127,33 @@
     .gridCatalogo{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 50px;
+        height: auto;
+        margin-bottom: 30px;
+        gap: 50px;
+    }
+
+    .libro{
+        transition: 0.3s;
+        img{
+            width: 200px;
+            transition: 0.4s;
+            box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
+        }
+    }
+}
+
+/*Pantallas medianas*/
+@media (min-width: 768px) and (max-width: 993px) {
+    .cuerpo{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .gridCatalogo{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 50px;
         height: auto;

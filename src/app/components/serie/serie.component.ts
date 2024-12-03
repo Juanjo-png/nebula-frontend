@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { LibrosService } from '../../services/libros.service';
 import { HeaderComponent } from "../header/header.component";
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FooterComponent } from '../footer/footer.component';
 
@@ -16,6 +16,7 @@ import { FooterComponent } from '../footer/footer.component';
 export class SerieComponent implements OnInit{
   constructor(private router: Router) {}
   private librosService = inject(LibrosService);
+  private viewportScroller = inject(ViewportScroller);
   libros: any[] = [];
   private route = inject(ActivatedRoute);
   idLibro: string | null = null;
@@ -25,6 +26,7 @@ export class SerieComponent implements OnInit{
   nombreCategoria: string = "";
 
   ngOnInit() {
+    this.viewportScroller.scrollToPosition([0, 0]);
     this.idLibro = this.route.snapshot.paramMap.get('id');
     if (this.idLibro) {
       this.librosService.getLibrosPorSerie(this.idLibro).subscribe((libros: any) => {
@@ -37,5 +39,10 @@ export class SerieComponent implements OnInit{
         this.nombreCategoria = serie[0][0].categoria;
       });
     }
+  }
+
+  onPageChange(page: number): void {
+    this.page = page;
+    this.viewportScroller.scrollToPosition([0, 0]); // Desplaza al inicio de la página
   }
 }

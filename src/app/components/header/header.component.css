@@ -144,7 +144,8 @@ i:hover{
     filter: brightness(550%);
 }
 
-@media (max-width: 700px) {
+/*Telefonos Moviles*/
+@media only screen and (max-width: 575px){
     .barraBusqueda{
         width: 100%;
     }
@@ -158,19 +159,17 @@ i:hover{
         gap: 0px;
 
         img{
-            width: 150px;
+            width: 180px;
             margin-left: 0px;
-            margin-right: 58px;
+            margin-right: 84px;
         }
         i{
             font-size: 35px;
         }
     }
     
-   
-
     .navbar-brand {
-        order: 2; /* El logo será el segundo elemento */
+        order: 2; 
     }
 
     .navbar-toggler {
@@ -185,7 +184,165 @@ i:hover{
             font-size: 25px;
         }
     }
+
+    .barra{
+        img{
+            width: 150px;
+            margin-left: 0px;
+            margin-right: 65px;
+        }
+    }
+    
+    .carrito{
+        .noCarrito{
+            bottom: 0;
+            right: 0;
+            font-size: 10px;
+            position: absolute;
+            background-color: green;
+            padding: 5px;
+            padding-left: 9px;
+            padding-right: 8px;
+            border-radius: 50px;
+            transition: 0.4s;
+            margin-top: 10px;
+        }
+    }
 }
+
+/*Tablets*/
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .barraBusqueda{
+        width: 100%;
+    }
+
+    .barra{
+        display: flex;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
+        gap: 0px;
+
+        img{
+            width: 180px;
+            margin-left: 0px;
+            margin-right: 84px;
+        }
+        i{
+            font-size: 35px;
+        }
+    }
+    
+    .navbar-brand {
+        order: 2; 
+    }
+
+    .navbar-toggler {
+        order: 3;
+    }
+
+    .usuario{
+        gap: 15px;
+        padding-left: 8px;
+
+        i{
+            font-size: 30px;
+        }
+    }
+
+    .barra{
+        img{
+            width: 180px;
+            margin-left: 0px;
+            margin-right: 65px;
+        }
+    }   
+}
+
+/*Pantallas medianas*/
+@media (min-width: 768px) and (max-width: 993px) {
+    .barraBusqueda{
+        width: 100%;
+    }
+
+    .barra{
+        display: flex;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
+        gap: 0px;
+
+        img{
+            width: 180px;
+            margin-left: 0px;
+            margin-right: 84px;
+        }
+        i{
+            font-size: 35px;
+        }
+    }
+    
+    .navbar-brand {
+        order: 2; 
+    }
+
+    .navbar-toggler {
+        order: 3;
+    }
+
+    .usuario{
+        gap: 15px;
+        padding-left: 8px;
+
+        i{
+            font-size: 25px;
+        }
+    }
+
+    .barra{
+        img{
+            width: 150px;
+            margin-left: 0px;
+            margin-right: 65px;
+        }
+    }
+
+    .barraBusqueda{
+        width: 100%;
+    }
+
+    .barra{
+        display: flex;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
+        gap: 0px;
+
+        img{
+            width: 180px;
+            margin-left: 0px;
+            margin-right: 84px;
+        }
+        i{
+            font-size: 35px;
+        }
+    }
+    
+    .usuario{
+        gap: 15px;
+        padding-left: 8px;
+
+    }
+}
+
+
+
+
+
+
 
 
 

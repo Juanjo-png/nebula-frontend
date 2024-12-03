@@ -4,7 +4,7 @@ import { LibrosService } from '../../services/libros.service';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-buscar-libros',
@@ -16,12 +16,14 @@ import { CommonModule } from '@angular/common';
 export class BuscarLibrosComponent implements OnInit{
   private librosService = inject(LibrosService);
   private route = inject(ActivatedRoute);
+  private viewportScroller = inject(ViewportScroller);
 
   libros: any[] = [];
   busqueda: string | null = null;
   page: number = 1;
 
   ngOnInit(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
     this.route.paramMap.subscribe(paramMap => {
       this.busqueda = this.route.snapshot.paramMap.get('id');
     if (this.busqueda) {
@@ -32,5 +34,10 @@ export class BuscarLibrosComponent implements OnInit{
     }
     })
     
+  }
+
+  onPageChange(page: number): void {
+    this.page = page;
+    this.viewportScroller.scrollToPosition([0, 0]); // Desplaza al inicio de la página
   }
 }

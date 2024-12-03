@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdelantosService {
-  private API_Adelantos = "http://localhost:3000/adelantos";
+  private API_Adelantos = `${environment.API_BACK}/adelantos`;
 
   constructor(private http: HttpClient) { }
 

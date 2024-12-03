@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { libro } from '../models/libro.model';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LibrosService {
 
-  private API_Libros = "http://localhost:3000/libros";
+  private API_Libros = `${environment.API_BACK}/libros`;
 
   constructor(private http: HttpClient) { }
 

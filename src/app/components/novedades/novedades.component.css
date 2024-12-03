@@ -88,7 +88,7 @@ hr{
     margin-top: 20px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .cuerpo{
         margin-left: 5%;
         margin-right: 5%;

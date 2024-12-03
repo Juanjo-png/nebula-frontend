@@ -262,6 +262,10 @@
         .noticia{
             transition: 0.4s;
             width: 330px;
+
+            imagenNoticia{
+                width: 100%;
+            }
             img{
                 transition: 0.4s;
                 width: 100%;
@@ -368,7 +372,7 @@
     background-color: #373737;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 993px) {
     .carruselBox{
         width:fit-content;
         margin: 0px;
@@ -431,9 +435,10 @@
     
             .noticia{
                 border: 1px solid gainsboro;
-                width: max-content;
+                width: 90%;
+                
                 img{
-                    width: 500px;
+                    width: 100%px;
                 }
 
                 .textoNoticias{

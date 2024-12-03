@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeriesService {
-  private API_Series = "http://localhost:3000/seriesLibros";
+  private API_Series = `${environment.API_BACK}/seriesLibros`;
 
   constructor(private http: HttpClient) { }
 

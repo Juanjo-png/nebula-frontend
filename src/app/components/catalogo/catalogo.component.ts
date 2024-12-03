@@ -3,7 +3,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { LibrosService } from '../../services/libros.service';
 import { HeaderComponent } from "../header/header.component";
 import { NgxPaginationModule } from 'ngx-pagination';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { FooterComponent } from "../footer/footer.component";
 import { SeriesService } from '../../services/series.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -28,6 +28,8 @@ export class CatalogoComponent implements OnInit{
       localStorage.setItem('appLanguage', 'es'); // Guarda el idioma predeterminado
     }
   }
+
+  private viewportScroller = inject(ViewportScroller)
   private librosService = inject(LibrosService);
   private seriesService = inject(SeriesService)
   libros: any[] = [];
@@ -39,5 +41,10 @@ export class CatalogoComponent implements OnInit{
       this.libros = libros;
       console.log(this.libros);
     });
+  }
+
+  onPageChange(page: number): void {
+    this.page = page;
+    this.viewportScroller.scrollToPosition([0, 0]);
   }
 }

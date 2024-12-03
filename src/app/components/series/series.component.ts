@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { HeaderComponent } from "../header/header.component";
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FooterComponent } from '../footer/footer.component';
 import { SeriesService } from '../../services/series.service';
@@ -16,6 +16,7 @@ import { SeriesService } from '../../services/series.service';
 export class SeriesComponent implements OnInit{
   constructor(private router: Router) {}
   private seriesService = inject(SeriesService);
+  private viewportScroller = inject(ViewportScroller);
   series: any[] = [];
   private route = inject(ActivatedRoute);
   idSerie: string | null = null;
@@ -24,6 +25,7 @@ export class SeriesComponent implements OnInit{
   categoria: string = "";
 
   ngOnInit() {
+    this.viewportScroller.scrollToPosition([0, 0]);
     this.idSerie = this.route.snapshot.paramMap.get('id');
     if (this.idSerie != "0" && this.idSerie != null) {
       this.seriesService.getSeries(this.idSerie).subscribe((series: any) => {
@@ -41,6 +43,11 @@ export class SeriesComponent implements OnInit{
         this.noVolumenes;
       });   
     }
+  }
+
+  onPageChange(page: number): void {
+    this.page = page;
+    this.viewportScroller.scrollToPosition([0, 0]); // Desplaza al inicio de la página
   }
 
 }

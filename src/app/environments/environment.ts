@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   stripe_pk:'pk_test_51QLmntLB0eLe51x9lfRirgjQZuaYEsOTBNfg0fglcvU3xbWHJv0riCeyXWO1A3TAQQVC4YOwttedQcEl0Nozt49i00Po3vJmaa',
-  api:'http://localhost:3000'
+  api:'http://localhost:3000',
+  API_BACK: "https://nebula-backend-r130.onrender.com",
 };
 
 /*
