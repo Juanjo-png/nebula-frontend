@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
   public tokenData: TokenData | null = null; // Inicializa como null
   public idUsuario: string = '';
   usuario: Usuario | null = null; // Inicializa como null
+  numeroPortada: number = 0;
 
   constructor(private router: Router, private translate: TranslateService) {
     // Verificar si hay un idioma almacenado en localStorage
@@ -52,6 +53,7 @@ export class HomeComponent implements OnInit {
   noticias: any[] = [];
 
   ngOnInit() {
+    this.numeroPortada = this.obtenerNumeroAleatorio();
     if (this.token) {
       this.tokenData = jwtDecode<TokenData>(this.token); // Asegúrate de que el tipo coincide
       this.idUsuario = this.tokenData.idUsuario[0].id;
@@ -115,7 +117,10 @@ export class HomeComponent implements OnInit {
       }
       
     }
-    
+  }
+
+  obtenerNumeroAleatorio(): number {
+    return Math.floor(Math.random() * 3) + 1;
   }
 }
 

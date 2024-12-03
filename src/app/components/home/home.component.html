@@ -1,41 +1,31 @@
 <app-header></app-header>
-<div class="carruselBox">
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-        <div class="carousel-inner">
-          <div class="carousel-item active carrusel1">
-            <div class="carruselText">
-                <div class="carruselText3">
-                    <p>Dioses contra Humanos <br> ¡¡¡Las batallas que deciden el destino del hombre!!!</p>
-                    <button class="botonDestacado botonCarrusel1">Leer más</button>
-                </div>
-            </div>
-            <img src="../../../assets/img/otros/3.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <div class="carruselText3">
-                <p>La tribu de los elfos reclama venganza sobre quienes los purgaron. ¡¿Sus aliados son ahora sus enemigos?! </p>
-                <button class="botonDestacado botonCarrusel2">Leer más</button>
-            </div>
-            <img src="../../../assets/img/otros/2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <div class="carruselText3">
-                <p> Veneno contra Spiderman, una vez más... ¡pero como si fuera por primera vez! Eddie Brock se enfrenta a un trepamuros diferente al que conoce.</p>
-                <button class="botonDestacado botonCarrusel3">Leer más</button>
-            </div>
-            <img src="../../../assets/img/otros/1.jpg" class="d-block w-100" alt="...">
-          </div>
+@if (this.numeroPortada == 1) {
+    <div class="portada portada{{this.numeroPortada}}">
+        <img src="../../../assets/img/otros/logo1.png" class="logoPortada">
+        <div class="carruselText3">
+            <p>Dioses contra Humanos <br> ¡¡¡Las batallas que deciden el destino del hombre!!!</p>
+            <button class="botonDestacado botonCarrusel1">Leer más</button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
+    </div> 
+}
+@if (this.numeroPortada == 2) {
+    <div class="portada portada{{this.numeroPortada}}">
+        <img src="../../../assets/img/otros/logo2.png" class="logoPortada">
+        <div class="carruselText3">
+            <p>La tribu de los elfos reclama venganza sobre quienes los purgaron. ¡¿Sus aliados son ahora sus enemigos?! </p>
+            <button class="botonDestacado botonCarrusel2">Leer más</button>
+        </div>
+    </div> 
+}
+@if (this.numeroPortada == 3) {
+    <div class="portada portada{{this.numeroPortada}}">
+        <img src="../../../assets/img/otros/logo3.png" class="logoPortada">
+        <div class="carruselText3">
+            <p> Venom contra Spiderman, una vez más... ¡pero como si fuera por primera vez! Eddie Brock se enfrenta a un trepamuros diferente al que conoce.</p>
+            <button class="botonDestacado botonCarrusel3">Leer más</button>
+        </div>
+    </div> 
+}
 <div class="cuerpo">
     <div class="catalogo">
         <h3>{{"Novedades Recientes" | translate}}</h3>

@@ -63,3 +63,24 @@
     transition: 0.4s;
     background-color: black;
 }
+
+@media only screen and (max-width: 576px){
+    .cuerpo {
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: left;   
+        padding: 30px;
+        padding-top: 0px;
+        label{
+            font-weight: 700;
+        }
+    
+        .botones{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
