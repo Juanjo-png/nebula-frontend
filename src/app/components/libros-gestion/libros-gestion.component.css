@@ -45,6 +45,10 @@ h2{
 .divTabla{
     text-align: center;
 
+    table{
+        table-layout: fixed;
+    }
+
     th{
         text-align: center;
         background-color: #19225c;
@@ -55,6 +59,9 @@ h2{
     td{
         text-align: center;
         vertical-align: middle;
+        width: 300px;
+        word-wrap: break-word;  
+        white-space: normal;
     }
 }
 
@@ -71,13 +78,12 @@ h2{
         margin-left: 5%;
         margin-right: 5%;
         margin-top: 100px;
-
     }
 
     .divTabla{
         margin-left: 0%;
         margin-right: 0%;
-
+        
         .esconder{
             display: none;
         }

@@ -9,7 +9,7 @@
 .gridCatalogo{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 0px;
+    grid-column-gap: 20px;
     grid-row-gap: 50px;
     height: auto;
     margin-bottom: 30px;
@@ -21,6 +21,17 @@
         width: 150px;
         transition: 0.4s;
         box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
+    }
+
+    .detallesLibro{
+        .titulo{
+            a{
+                width: 100%;
+                word-wrap: break-word;  
+                white-space: normal;
+            }
+            
+        }
     }
 }
 
@@ -114,6 +125,16 @@
             transition: 0.4s;
             box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
         }
+        .detallesLibro{
+            .titulo{
+                a{
+                    width: 100%;
+                    word-wrap: break-word;  
+                    white-space: normal;
+                }
+                
+            }
+        }
     }
 }
 
@@ -141,6 +162,16 @@
             transition: 0.4s;
             box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
         }
+        .detallesLibro{
+            .titulo{
+                a{
+                    width: 100%;
+                    word-wrap: break-word;  
+                    white-space: normal;
+                }
+                
+            }
+        }
     }
 }
 
@@ -167,6 +198,16 @@
             width: 200px;
             transition: 0.4s;
             box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
+        }
+        .detallesLibro{
+            .titulo{
+                a{
+                    width: 100%;
+                    word-wrap: break-word;  
+                    white-space: normal;
+                }
+                
+            }
         }
     }
 }

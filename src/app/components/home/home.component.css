@@ -4,6 +4,20 @@
     /* background-color: bisque; */
 }
 
+.botonCarrusel1{
+    background-color: rgb(173, 86, 86);
+}
+
+.botonCarrusel2{
+    background-color: rgb(67, 178, 200);
+}
+
+
+.botonCarrusel3{
+    background-color: rgb(175, 50, 89);
+}
+
+
 .carruselBox {
     position: relative;
     overflow: hidden;
@@ -15,9 +29,9 @@
 
 .carruselText3{
     position: absolute;
-    margin-left: 39%;
+    margin-left: 37%;
     margin-top: 24%;
-    background-color: rgba(0, 0, 0, 0.468);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     font-weight: 300;
     font-size: 20px;
@@ -101,14 +115,15 @@
 }
 
 .textoNov1 {
-    background-color: rgb(96, 62, 0);
+    
+    background-color: rgb(106, 23, 0);
     text-align: left;
     padding: 10px;
     height: 100%;
 }
 
 .textoNov2 {
-    background-color: rgb(106, 0, 35);
+    background-color: rgb(96, 62, 0);
     text-align: left;
     padding: 10px;
     height: 100%;
@@ -184,6 +199,8 @@
             font-weight: 600;
             font-size: 20px;
             padding-bottom: 5px;
+            word-wrap: break-word;  
+            white-space: normal;
         }
     }
 }
@@ -356,22 +373,33 @@
 }
 
 .botonDestacado{
-        background-color: #5e5e5e;
-        border: 0px;
-        color: white;
-        border-radius: 7px;
-        padding: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        font-size: 15px;
-        transition: 0.4s;
-        width: 150px;
+    border: 0px;
+    color: white;
+    font-weight: 600;
+    transition: 0.4s;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 320px;
+}
+
+.boton1{
+ background-color: #6da9cc;
+}
+
+.boton2{
+    background-color:#7abd55;
+}
+
+.boton3{
+    background-color: #e390ed;
 }
 
 .botonDestacado:hover{
-    background-color: #373737;
+    background-color: black;
 }
 
+/*Moviles*/
 @media only screen and (max-width: 575px){
     .carruselBox{
         width:fit-content;
@@ -381,8 +409,8 @@
 
     .carruselText3{
         position: absolute;
-        margin-left: 23%;
-        margin-top: 59%;
+        margin-left: 15%;
+        margin-top: 69%;
         font-weight: 300;
         font-size: 20px;
         padding: 30px;
@@ -439,7 +467,7 @@
                 width: 90%;
                 
                 img{
-                    width: 100%px;
+                    width: 100%;
                 }
 
                 .textoNoticias{
@@ -495,6 +523,7 @@
     
 }
 
+/*Moviles*/
 @media only screen and (min-width: 576px) and (max-width: 767px){
     .carruselBox{
         width:fit-content;
@@ -504,7 +533,7 @@
 
     .carruselText3{
         position: absolute;
-        margin-left: 23%;
+        margin-left: 16%;
         margin-top: 59%;
         font-weight: 300;
         font-size: 20px;
@@ -616,6 +645,7 @@
     }
 }
 
+/*Portatil*/
 @media (min-width: 768px) and (max-width: 993px) {
     .carruselBox{
         width:fit-content;
@@ -625,8 +655,8 @@
 
     .carruselText3{
         position: absolute;
-        margin-left: 23%;
-        margin-top: 59%;
+        margin-left: 30%;
+        margin-top: 47%;
         font-weight: 300;
         font-size: 20px;
         padding: 30px;

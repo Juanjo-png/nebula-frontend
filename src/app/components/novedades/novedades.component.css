@@ -10,9 +10,23 @@
 .libro{
     transition: 0.3s;
     img{
-        width: 250px;
+        width: 90%;
         transition: 0.4s;
         box-shadow: -9px 5px 5px 2px rgb(180, 180, 180);
+    }
+    .titulo{
+        padding-top: 10px;
+        a{
+            font-weight: 600;
+            font-size: 20px;
+            padding-bottom: 5px;
+            word-wrap: break-word;  
+            white-space: normal;
+
+            p{
+                font-size: 18px;
+            }
+        }
     }
 }
 
@@ -79,8 +93,10 @@
 .grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 0px;
+    grid-column-gap: 20px;
     grid-row-gap: 50px;
+    align-items: start;
+    justify-content: center;
     height: auto;
 }
 
@@ -88,13 +104,63 @@ hr{
     margin-top: 20px;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 575px){
     .cuerpo{
         margin-left: 5%;
         margin-right: 5%;
     }
 
-    .row3{
+    .tituloMes{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        height: auto;
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+
+    .libro{
+        img{
+            width: 500px;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+.cuerpo{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .tituloMes{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        height: auto;
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 993px) {
+    .cuerpo{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .grid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 20px;
