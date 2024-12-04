@@ -41,7 +41,7 @@ export class LibrosService {
   }
 
   getSerie(id: string): Observable<any> {
-    return this.http.get(`http://localhost:3000/series/${id}`);
+    return this.http.get(`${environment.API_BACK}/series/${id}`);
   }
 
   getBuscarLibros(id: string): Observable<any> {

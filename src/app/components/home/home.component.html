@@ -95,30 +95,39 @@
         </div>
         <div class="cuerpoNoticias">
             <div class="noticia">
-                <div class="imagenNoticia">
-                    <img src="{{this.noticias[0].miniatura}}" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
-                </div>
-                <div class="textoNoticias">
-                    <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
-                    <a routerLink="/noticias/{{this.noticias[0].id}}">{{"Leer más" | translate}} →</a>
-                </div>
+                @if (this.noticias[0]) {
+                    <div class="imagenNoticia">
+                        <img [src]="noticias[0].miniatura" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
+                    </div>
+                    <div class="textoNoticias">
+                        <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
+                        <a routerLink="/noticias/{{this.noticias[0].id}}">{{"Leer más" | translate}} →</a>
+                    </div>
+                }
             </div>
             <div class="noticia">
-                <div class="imagenNoticia">
-                    <img src="{{this.noticias[0].miniatura}}" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
-                </div>
-                <div class="textoNoticias">
-                    <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
-                    <a routerLink="/noticias/{{this.noticias[0].id}}">{{"Leer más" | translate}} →</a>
-                </div>
+                @if (this.noticias[0]) {
+                    <div class="imagenNoticia">
+                        <img [src]="noticias[0].miniatura" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
+                    </div>
+                    <div class="textoNoticias">
+                        <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
+                        <a routerLink="/noticias/{{this.noticias[0].id}}">{{"Leer más" | translate}} →</a>
+                    </div>
+                }
             </div>
             <div class="noticia">
-                <img src="{{this.noticias[0].miniatura}}" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
-                <div class="textoNoticias">
-                    <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
-                    <a routerLink="/noticias/{{this.noticias[0].id}}">{{"Leer más" | translate}} →</a>
-                </div>
+                @if (this.noticias[0]) {
+                    <div class="imagenNoticia">
+                        <img [src]="noticias[0].miniatura" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
+                    </div>
+                    <div class="textoNoticias">
+                        <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
+                        <a routerLink="/noticias/{{this.noticias[0].id}}">{{"Leer más" | translate}} →</a>
+                    </div>
+                }
             </div>
+            
         </div>
     </div>   
 </div>

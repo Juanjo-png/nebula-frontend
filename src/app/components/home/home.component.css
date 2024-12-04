@@ -120,7 +120,7 @@
 
 .imagenNoti{
     img{
-        height: 750px;
+        height: 100%;
     }
 }
 
@@ -322,10 +322,11 @@
 .resaltados {
     display: flex;
     flex-direction: column;
-
+    width: 100%;
     .destacado {
         display: flex;
         height: 500px;
+        width: 100%;
 
         h3{
             font-size: 30px;
