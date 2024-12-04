@@ -18,22 +18,22 @@
         </div>
     </div>
     <div class="row2">
-        <div class="bloque">
+        <div class="bloque" routerLink="/noticias/{{this.noticias[1].id}}">
             <div class="imagen">
-                <img src="{{this.noticias[0].miniatura}}" alt="">
+                <img src="{{this.noticias[1].miniatura}}" alt="">
             </div>
             <div class="contenido">
-                <h4>{{this.noticias[0].titulo}}</h4>
-                <p>{{this.noticias[0].fecha}}</p>
+                <h4>{{this.noticias[1].titulo}}</h4>
+                <p>{{this.noticias[1].fecha}}</p>
             </div>
         </div>
-        <div class="bloque">
+        <div class="bloque" routerLink="/noticias/{{this.noticias[2].id}}">
             <div class="imagen">
-                <img src="{{this.noticias[0].miniatura}}" alt="">
+                <img src="{{this.noticias[2].miniatura}}" alt="">
             </div>
             <div class="contenido">
-                <h4>{{this.noticias[0].titulo}}</h4>
-                <p>{{this.noticias[0].fecha}}</p>
+                <h4>{{this.noticias[2].titulo}}</h4>
+                <p>{{this.noticias[2].fecha}}</p>
             </div>
         </div>
         <div class="bloque">
@@ -89,3 +89,5 @@
     </div>
 </div>
 <app-footer></app-footer>
+
+

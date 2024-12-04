@@ -4,7 +4,7 @@
         <img src="../../../assets/img/otros/logo1.png" class="logoPortada">
         <div class="carruselText3">
             <p>Dioses contra Humanos <br> ¡¡¡Las batallas que deciden el destino del hombre!!!</p>
-            <button class="botonDestacado botonCarrusel1">Leer más</button>
+            <button class="botonDestacado botonCarrusel1" routerLink="/serie/19">Leer más</button>
         </div>
     </div> 
 }
@@ -22,7 +22,7 @@
         <img src="../../../assets/img/otros/logo3.png" class="logoPortada">
         <div class="carruselText3">
             <p> Venom contra Spiderman, una vez más... ¡pero como si fuera por primera vez! Eddie Brock se enfrenta a un trepamuros diferente al que conoce.</p>
-            <button class="botonDestacado botonCarrusel3">Leer más</button>
+            <button class="botonDestacado botonCarrusel3" routerLink="/libros/34">Leer más</button>
         </div>
     </div> 
 }
@@ -106,24 +106,24 @@
                 }
             </div>
             <div class="noticia">
-                @if (this.noticias[0]) {
+                @if (this.noticias[1]) {
                     <div class="imagenNoticia">
-                        <img [src]="noticias[0].miniatura" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
+                        <img [src]="noticias[1].miniatura" alt="" routerLink="/noticias/{{this.noticias[1].id}}">
                     </div>
                     <div class="textoNoticias">
-                        <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
-                        <a routerLink="/noticias/{{this.noticias[0].id}}">{{"Leer más" | translate}} →</a>
+                        <h5 routerLink="/noticias/{{this.noticias[1].id}}">{{this.noticias[1].titulo}}</h5>
+                        <a routerLink="/noticias/{{this.noticias[1].id}}">{{"Leer más" | translate}} →</a>
                     </div>
                 }
             </div>
             <div class="noticia">
-                @if (this.noticias[0]) {
+                @if (this.noticias[2]) {
                     <div class="imagenNoticia">
-                        <img [src]="noticias[0].miniatura" alt="" routerLink="/noticias/{{this.noticias[0].id}}">
+                        <img [src]="noticias[2].miniatura" alt="" routerLink="/noticias/{{this.noticias[2].id}}">
                     </div>
                     <div class="textoNoticias">
-                        <h5 routerLink="/noticias/{{this.noticias[0].id}}">{{this.noticias[0].titulo}}</h5>
-                        <a routerLink="/noticias/{{this.noticias[0].id}}">{{"Leer más" | translate}} →</a>
+                        <h5 routerLink="/noticias/{{this.noticias[2].id}}">{{this.noticias[2].titulo}}</h5>
+                        <a routerLink="/noticias/{{this.noticias[2].id}}">{{"Leer más" | translate}} →</a>
                     </div>
                 }
             </div>
@@ -146,13 +146,13 @@
     </div>
     <div class="destacado">
         <div class="destacadoTitle2">
-            <h3>Blue Lock nº 18</h3>
+            <h3>Blue Lock</h3>
             <p>¡Comienza la segunda fase del proyecto BLUE LOCK!</p>
             <p>¡Los egoístas lucharán en aún más campos de batalla!
                 Tras ganar el gran partido contra la selección japonesa de Sub-20, Isagi y el resto de chicos de BLUE LOCK se han convertido en auténticos héroes.
                 ¡Mientras los delanteros gozan de unas breves vacaciones, Jinpachi Ego ya les está preparando un nuevo desafío!
             </p>
-            <button class="botonDestacado boton1">Leer más</button>
+            <button class="botonDestacado boton1" routerLink="/serie/13">Leer más</button>
         </div>
         <img src="../../../assets/img/otros/destacado2.jpg">
     </div>
@@ -169,5 +169,7 @@
     </div>
 </div> 
 <app-footer></app-footer>
+
+
 
 

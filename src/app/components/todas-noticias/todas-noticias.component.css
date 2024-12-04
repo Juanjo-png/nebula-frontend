@@ -109,6 +109,7 @@
         gap: 0px;
         flex-direction: column; 
         width: min-content;
+        height: 100%;
         img{
             width: 250px;
         }
@@ -117,9 +118,11 @@
     .contenido{
         padding: 10px;
         text-align: left;
+        height: 100%;
         
         h4{
             font-weight: 600;
+            font-size: 20px;
         }
     
         p{
