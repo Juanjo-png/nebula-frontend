@@ -288,11 +288,11 @@
 
     .cuerpoNoticias{
         display: flex;
-        justify-content: space-between;
+        gap: 30px;
 
         .noticia{
             transition: 0.4s;
-            width: 330px;
+            width: 33%;
 
             imagenNoticia{
                 width: 100%;
@@ -725,7 +725,7 @@
                 width: 90%;
                 
                 img{
-                    width: 100%px;
+                    width: 100%;
                 }
 
                 .textoNoticias{
