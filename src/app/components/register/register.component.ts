@@ -5,6 +5,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { usuario } from '../../models/usuario.model';
 import { UsuariosService } from '../../services/usuarios.service';
 import { ToastrService } from 'ngx-toastr';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -43,7 +44,11 @@ export class RegisterComponent implements OnInit {
 
     const regexContra = /^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{5,}$/;
     if (!regexContra.test(this.contrasena)) {
-      this.toastrService.error('La contraseña no es segura');
+      Swal.fire({
+        title: "La contraseña debe de tener: Mas de 5 carácteres, 1 mayúscula y una minúscula",
+        icon: "error",
+        confirmButtonText: "Aceptar"
+      });
       return;
     }
 

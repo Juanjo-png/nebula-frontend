@@ -47,8 +47,9 @@ export class UserEnviosComponent implements OnInit{
         title: "¿Quieres cancelar el envio?",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
+        confirmButtonColor: "#81689D",
+        cancelButtonColor: "#dd6161",
+        cancelButtonText: "Cancelar",
         confirmButtonText: "Cancelar Envio"
       }).then((result) => {
         if (result.isConfirmed) {

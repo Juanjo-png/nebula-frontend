@@ -197,34 +197,44 @@ i:hover{
     }
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 575px){
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
     .titulo{
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
     .cuerpo{
-        margin-left: 4%;
-        margin-right: 5%;
+        font-size: 60%;
+        margin-left: 2%;
+        margin-right: 2%;
         margin-bottom: 70px;
+        width: 100%;
         display: flex;
         flex-direction: column;
 
         .tabla{
             img{
-                width: 40px;
+                width: 40%;
             }
 
             td{
-                padding: 5px;
-                padding-bottom: 20px;
-                padding-top: 20px;
+                padding: 15px;
                 font-weight: 600;
-                font-size: 15px;
+                padding-left: 0px;
+                padding-right: 0px;
+                margin: 0px;
+                width: 100px;
+                word-wrap: break-word;  
+                white-space: normal;
             }
             th{
                 color: grey;
-                padding: 5px;
-                font-size: 15px;
+                padding: 15px;
+                padding-left: 0px;
+                padding-right: 0px;
                 font-weight: 400;
             }
         }
@@ -234,3 +244,8 @@ i:hover{
         }
     }
 }
+
+@media (min-width: 768px) and (max-width: 993px) {
+
+}
+

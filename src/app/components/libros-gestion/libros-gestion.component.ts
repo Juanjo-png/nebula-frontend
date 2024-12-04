@@ -42,8 +42,9 @@ export class LibrosGestionComponent implements OnInit{
       title: "¿Quieres eliminar el libro??",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      confirmButtonColor: "#81689D",
+      cancelButtonColor: "#dd6161",
+      cancelButtonText: "Cancelar",
       confirmButtonText: "Eliminar"
     }).then((result) => {
       if (result.isConfirmed) {

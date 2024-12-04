@@ -149,7 +149,7 @@ label{
     outline: none;
   }
 
-  @media (max-width: 576px) {
+  @media only screen and (max-width: 575px){
     .cuerpo {
         width: 100%;
         display: flex;
@@ -158,6 +158,12 @@ label{
         .wrapper{
             width: 100%;
             padding-top: 40px;
+        }
+
+        .inputBordeUser{
+            input{
+                width: 100%;
+            }
         }
 
         .aside{

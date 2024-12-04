@@ -43,8 +43,9 @@ export class NoticiasGestionComponent implements OnInit{
       title: "¿Quieres eliminar la noticia?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      confirmButtonColor: "#81689D",
+      cancelButtonColor: "#dd6161",
+      cancelButtonText: "Cancelar",
       confirmButtonText: "Eliminar"
     }).then((result) => {
       if (result.isConfirmed) {
