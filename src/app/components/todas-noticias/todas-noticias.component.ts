@@ -4,7 +4,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NoticiasService } from '../../services/noticias.service';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-todas-noticias',
@@ -15,10 +15,12 @@ import { CommonModule } from '@angular/common';
 })
 export class TodasNoticiasComponent implements OnInit{
   private noticiasService = inject(NoticiasService);
+  private viewportScroller = inject(ViewportScroller)
   noticias: any[] = [];
   page: number = 1;
 
   ngOnInit(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
     this.noticiasService.getNoticias().subscribe((noticias: any) => {
       this.noticias = noticias;
     });
