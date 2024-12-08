@@ -158,9 +158,10 @@ i:hover{
         padding-right: 5px;
         gap: 0px;
 
-        a{
+        .logoEnlace{
+            width: 25%;
             .logo{
-                width: 180px;
+                width: 100%;
                 margin-left: 0px;
                 margin-right: 0px;
             }

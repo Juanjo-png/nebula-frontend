@@ -21,17 +21,13 @@
     td{
         padding: 15px;
         font-weight: 600;
-        padding-left: 0px;
-        padding-right: 0px;
-        width: 3%;
         word-wrap: break-word;  
         white-space: normal;
     }
     th{
         color: grey;
         padding: 15px;
-        padding-left: 0px;
-        padding-right: 0px;
+        
         font-weight: 400;
     }
 }

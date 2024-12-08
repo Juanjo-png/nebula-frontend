@@ -421,6 +421,10 @@
         margin: 0px;
         padding: 0px;
     }
+
+    .portada{
+        margin-top: 42px;
+    }
     
     .logoPortada{
         width: 90%;
