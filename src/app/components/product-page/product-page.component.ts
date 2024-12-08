@@ -6,6 +6,8 @@ import { FooterComponent } from "../footer/footer.component";
 import { itemCarrito } from '../../models/itemCarrito';
 import { libro } from '../../models/libro.model';
 import { ToastrService } from 'ngx-toastr';
+import { TranslateService } from '@ngx-translate/core';
+import { ViewportScroller } from '@angular/common';
 
 
 @Component({
@@ -19,12 +21,18 @@ export class ProductPageComponent implements OnInit{
   private librosService = inject(LibrosService);
   private route = inject(ActivatedRoute);
   private toastrService = inject(ToastrService);
+  private viewportScroller = inject(ViewportScroller)
+
+  constructor(private translate: TranslateService){
+    
+  }
 
   libro: any = {};  
   libros: any[] = [];
   idLibro: string | null = null;
 
   ngOnInit() {
+    this.viewportScroller.scrollToPosition([0, 0]);
     this.idLibro = this.route.snapshot.paramMap.get('id');
     if (this.idLibro) {
       this.librosService.getLibro(this.idLibro).subscribe((libro: any) => {
