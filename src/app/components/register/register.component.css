@@ -200,6 +200,10 @@ label {
 @media only screen and (max-width: 575px){
     .body{
         margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         h3{
             font-size: 20px;
@@ -229,7 +233,7 @@ label {
         }
 
         .fila{
-            width: 300px;
+            width: 85%;
         }
 
         .pregunta{
@@ -243,6 +247,8 @@ label {
             gap: 10px;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .inputContra{
