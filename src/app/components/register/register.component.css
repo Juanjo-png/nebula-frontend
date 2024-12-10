@@ -196,9 +196,18 @@ label {
     background-color: #d2d1d1;
 }
 
+
 @media only screen and (max-width: 575px){
     .body{
         margin-top: 80px;
+
+        h3{
+            font-size: 20px;
+        }
+        
+        .form-control::placeholder{
+            font-size: 15px;
+        }
     }
 
     .wrapper{
@@ -212,6 +221,7 @@ label {
 
         .inputBordeUser{
             width: 100%;
+            font-size: 15px;
         }
 
         .body{
@@ -219,10 +229,11 @@ label {
         }
 
         .fila{
-            width: 100%;
+            width: 260px;
         }
 
         .pregunta{
+            text-align: center;
             .inputBordeUser{
                 gap: 10px;
             }
@@ -240,7 +251,7 @@ label {
             margin-top: 10px;
         }
         .preguntaSeguridadInput::placeholder{
-            font-size: 72%;
+            font-size: 85%;
         }
     }
 }
@@ -288,9 +299,7 @@ label {
             margin-bottom: 10px;
             margin-top: 10px;
         }
-        .preguntaSeguridadInput::placeholder{
-            font-size: 72%;
-        }
+        
     }
 }
 
@@ -335,9 +344,6 @@ label {
             margin: 0px;
             margin-bottom: 10px;
             margin-top: 10px;
-        }
-        .preguntaSeguridadInput::placeholder{
-            font-size: 72%;
         }
     }
 }
