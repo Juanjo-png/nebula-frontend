@@ -26,7 +26,7 @@
     }
 }
 
-.container{
+.contenedor{
     width: auto;
     margin-left: 14%;
     margin-right: 14%;
@@ -36,8 +36,10 @@
 
 @media only screen and (max-width: 576px){
     .titulo{
+        margin-left: 2%;
+        margin-right: 2%;
         h1{
-            font-size: 20px;
+            font-size: 30px;
             font-weight: 700;
             
         }
@@ -55,8 +57,66 @@
         }
     }
     
-    .container{
+    .contenedor{
         margin-left: 0%;
         margin-right: 0%; 
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .titulo{
+        margin-left: 2%;
+        margin-right: 2%;
+        h1{
+            font-size: 30px;
+            font-weight: 700;
+            
+        }
+    
+        p{
+            font-weight: 300;
+        }
+
+        .tituloh1{
+            gap: 10px;
+            i{
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+    }
+    
+    .contenedor{
+        margin-left: 0%;
+        margin-right: 0%; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 993px) {
+    .titulo{
+        margin-left: 2%;
+        margin-right: 2%;
+        h1{
+            font-size: 30px;
+            font-weight: 700;
+            
+        }
+    
+        p{
+            font-weight: 300;
+        }
+
+        .tituloh1{
+            gap: 10px;
+            i{
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+    }
+    
+    .contenedor{
+        margin-left: 2%;
+        margin-right: 2%; 
     }
 }

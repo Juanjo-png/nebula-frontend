@@ -196,16 +196,15 @@ label {
     background-color: #d2d1d1;
 }
 
-
-@media (max-width: 768px) {
+@media only screen and (max-width: 575px){
     .body{
         margin-top: 80px;
     }
 
     .wrapper{
         height: 100%;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 0%;
+        margin-right: 0%;
 
         .inputContra{
             width: 100%;
@@ -220,7 +219,13 @@ label {
         }
 
         .fila{
-            width: 400px;
+            width: 100%;
+        }
+
+        .pregunta{
+            .inputBordeUser{
+                gap: 10px;
+            }
         }
 
         .contraseñas{
@@ -235,13 +240,105 @@ label {
             margin-top: 10px;
         }
         .preguntaSeguridadInput::placeholder{
-            font-size: 14px;
+            font-size: 72%;
         }
     }
-  }
+}
 
-  @media (max-width: 576px) {
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .body{
+        margin-top: 80px;
+    }
+
     .wrapper{
-        margin: 0%;
+        height: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+
+        .inputContra{
+            width: 100%;
+        }
+
+        .inputBordeUser{
+            width: 100%;
+        }
+
+        .body{
+            margin-left: 10px;
+        }
+
+        .fila{
+            width: 100%;
+        }
+
+        .pregunta{
+            .inputBordeUser{
+                gap: 10px;
+            }
+        }
+
+        .contraseñas{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputContra{
+            margin: 0px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .preguntaSeguridadInput::placeholder{
+            font-size: 72%;
+        }
     }
 }
+
+@media (min-width: 768px) and (max-width: 993px) {
+    .body{
+        margin-top: 80px;
+    }
+
+    .wrapper{
+        height: 100%;
+        
+
+        .inputContra{
+            width: 100%;
+        }
+
+        .inputBordeUser{
+            width: 100%;
+        }
+
+        .body{
+            margin-left: 10px;
+        }
+
+        .fila{
+            width: 100%;
+        }
+
+        .pregunta{
+            .inputBordeUser{
+                gap: 10px;
+            }
+        }
+
+        .contraseñas{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputContra{
+            margin: 0px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .preguntaSeguridadInput::placeholder{
+            font-size: 72%;
+        }
+    }
+}
+

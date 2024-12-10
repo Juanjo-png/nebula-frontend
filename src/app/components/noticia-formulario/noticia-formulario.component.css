@@ -59,3 +59,66 @@
 .botonNebula:disabled:hover {
     background-color: #525252;
 }
+
+@media only screen and (max-width: 576px){
+    .cuerpo {
+        margin-left: 0%;
+        margin-right: 0%;
+        text-align: left;   
+        padding: 20px;
+        padding-top: 0px;
+        label{
+            font-weight: 700;
+        }
+    
+        .botones{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .cuerpo {
+        margin-left: 0%;
+        margin-right: 0%;
+        text-align: left;   
+        padding: 20px;
+        padding-top: 0px;
+        label{
+            font-weight: 700;
+        }
+    
+        .botones{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 993px) {
+    .cuerpo {
+        margin-left: 0%;
+        margin-right: 0%;
+        text-align: left;   
+        padding: 20px;
+        padding-top: 0px;
+        label{
+            font-weight: 700;
+        }
+    
+        .botones{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}

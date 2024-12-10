@@ -55,8 +55,22 @@ h2{
     gap: 7px;
     .boton{
         border-radius: 5px;
-    }
-    
+    }   
+}
+
+.enviado{
+    color: rgb(61, 122, 243);
+    font-weight: 700;
+}
+
+.entregado{
+    color: rgb(69, 201, 26);
+    font-weight: 700;
+}
+
+.cancelado{
+    color: rgb(255, 0, 0);
+    font-weight: 700;
 }
 
 @media (max-width: 700px) {

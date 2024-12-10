@@ -20,6 +20,21 @@
     }
 }
 
+.enviado{
+    color: rgb(61, 122, 243);
+    font-weight: 700;
+}
+
+.entregado{
+    color: rgb(69, 201, 26);
+    font-weight: 700;
+}
+
+.cancelado{
+    color: rgb(255, 0, 0);
+    font-weight: 700;
+}
+
 .divTabla{
     text-align: center;
 

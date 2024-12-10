@@ -26,7 +26,16 @@
                 <td>{{ envio.nombre }}</td>
                 <td class="esconder">{{ envio.direccion }}</td>
                 <td class="esconder">{{ envio.usuario }}</td>
-                <td>{{ envio.estado }}</td>
+                @if (envio.estado == "Enviado") {
+                  <td class="enviado">{{ envio.estado }}</td>
+                }
+                @if (envio.estado == "Cancelado") {
+                  <td class="cancelado">{{ envio.estado }}</td>
+                }
+                @if (envio.estado == "Entregado") {
+                  <td class="entregado">{{ envio.estado }}</td>
+                }
+                
             <td>
               <div class="btn-group">
                 <button class="btn btn-primary boton">
