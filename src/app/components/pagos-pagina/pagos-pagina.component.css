@@ -138,15 +138,24 @@
   }
   
   .input-amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
     p{
       font-size: 15px;
       font-weight: 300;
       margin-bottom: 0px;
+      
+    }
+
+    .cajaInputAmount{
+      display: flex;
+      flex-direction: column;
     }
 
     .inputCantidad{
       border: 0px;
-      width: 130px;
+      width: min-content;
       background-color: transparent;
       font-size: 40px;
       font-weight: 600;

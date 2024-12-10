@@ -9,8 +9,10 @@
     <div class="divPagos">
       <form action="" [formGroup]="form" (submit)="initPay()">
         <div class="input-amount">
-          <p>Cantidad a Pagar</p>
-          <input type="text" readonly formControlName="amount" placeholder="0.00" class="inputCantidad">
+          <div class="cajaInputAmount">
+            <p>Cantidad a Pagar</p>
+            <input type="text"  formControlName="amount" placeholder="0.00" class="inputCantidad">
+          </div>
           <span class="currency">€</span>
         </div>
         <hr>

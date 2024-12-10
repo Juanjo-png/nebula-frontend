@@ -96,7 +96,7 @@
     padding: 18px;
     display: flex;
     width: 320px;
-    gap: 15px;
+    gap: 10px;
     justify-content: left;
     align-items: center;
     i{
@@ -106,7 +106,7 @@
 
     input{
         border: 0;
-        width: 200px;
+        width: 210px;
     }
 }
 
@@ -180,9 +180,7 @@ label{
 
         .iniciarBoton{
             width: 100%;
-        }
-
-        
+        } 
     }
   }
 

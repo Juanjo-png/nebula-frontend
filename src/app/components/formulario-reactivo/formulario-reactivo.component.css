@@ -66,10 +66,10 @@
 
 @media only screen and (max-width: 576px){
     .cuerpo {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 0%;
+        margin-right: 0%;
         text-align: left;   
-        padding: 30px;
+        padding: 20px;
         padding-top: 0px;
         label{
             font-weight: 700;

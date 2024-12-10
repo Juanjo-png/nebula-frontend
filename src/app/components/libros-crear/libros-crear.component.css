@@ -32,3 +32,31 @@
     margin-right: 14%;
     box-shadow: 0px 7px 5px 0px rgba(204,204,204,1);
 }
+
+
+@media only screen and (max-width: 576px){
+    .titulo{
+        h1{
+            font-size: 20px;
+            font-weight: 700;
+            
+        }
+    
+        p{
+            font-weight: 300;
+        }
+
+        .tituloh1{
+            gap: 10px;
+            i{
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+    }
+    
+    .container{
+        margin-left: 0%;
+        margin-right: 0%; 
+    }
+}

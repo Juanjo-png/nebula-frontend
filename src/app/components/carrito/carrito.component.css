@@ -24,10 +24,16 @@
         word-wrap: break-word;  
         white-space: normal;
     }
+    .titulo{
+        width: 240px;
+        font-size: 20;
+        word-wrap: break-word;  
+        white-space: normal;
+    }
     th{
         color: grey;
         padding: 15px;
-        
+        text-align: center;
         font-weight: 400;
     }
 }
