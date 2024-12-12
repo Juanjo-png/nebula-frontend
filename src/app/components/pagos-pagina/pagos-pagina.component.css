@@ -46,6 +46,12 @@
   .form-control{
     width: 100%;
   }
+
+  .direcciones{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   
   .checkout-user {
     text-align: center;

@@ -32,6 +32,9 @@ export class LibrosService {
   getLibrosPorCategoria(id: string): Observable<any> {
     return this.http.get(`${this.API_Libros}/categoria/${id}`);
   }
+  getLibrosPorEtiqueta(id: string): Observable<any> {
+    return this.http.get(`${this.API_Libros}/etiqueta/${id}`);
+  }
   getLibrosNovedades(id: string): Observable<any> {
     return this.http.get(`${this.API_Libros}/novedades/${id}`);
   }

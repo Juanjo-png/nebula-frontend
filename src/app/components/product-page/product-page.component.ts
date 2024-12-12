@@ -8,7 +8,14 @@ import { libro } from '../../models/libro.model';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
 import { ViewportScroller } from '@angular/common';
+import { jwtDecode } from 'jwt-decode';
+import { UsuariosService } from '../../services/usuarios.service';
+import { usuario } from '../../models/usuario.model';
 
+interface TokenData {
+  idUsuario: any;
+  nombreUsuario: string;
+}
 
 @Component({
   selector: 'app-product-page',
@@ -20,8 +27,13 @@ import { ViewportScroller } from '@angular/common';
 export class ProductPageComponent implements OnInit{
   private librosService = inject(LibrosService);
   private route = inject(ActivatedRoute);
+  private usuariosService = inject(UsuariosService);
   private toastrService = inject(ToastrService);
   private viewportScroller = inject(ViewportScroller)
+  private token = localStorage.getItem('token'); 
+  public tokenData: TokenData | null = null; // Inicializa como null
+  public idUsuario: string = '';
+  usuario: usuario | null = null; // Inicializa como null
 
   constructor(private translate: TranslateService){
     
@@ -34,6 +46,17 @@ export class ProductPageComponent implements OnInit{
   ngOnInit() {
     this.viewportScroller.scrollToPosition([0, 0]);
     this.idLibro = this.route.snapshot.paramMap.get('id');
+    if (this.token) {
+      this.tokenData = jwtDecode<TokenData>(this.token); // Asegúrate de que el tipo coincide
+      this.idUsuario = this.tokenData.idUsuario[0].id;
+      this.usuariosService.getUsuarioByID(this.idUsuario).subscribe((data: any) => {
+        this.usuario = data;
+        console.log(data);
+      });
+    }
+    else{
+      console.log("No hay usuario logeado ahora");
+    }
     if (this.idLibro) {
       this.librosService.getLibro(this.idLibro).subscribe((libro: any) => {
         this.libro = libro;

@@ -23,6 +23,16 @@ h2{
     }
 }
 
+.eliminar{
+    background-color: grey;
+    border: grey;
+}
+
+.eliminar:hover{
+    background-color: rgb(90, 90, 90);
+    border: rgb(90, 90, 90);;
+}
+
 .contenedor{
     margin-top: 8%;
     margin-left: 14%;
@@ -70,6 +80,11 @@ h2{
 
 .cancelado{
     color: rgb(255, 0, 0);
+    font-weight: 700;
+}
+
+.empaquetando{
+    color: rgb(255, 166, 0);
     font-weight: 700;
 }
 

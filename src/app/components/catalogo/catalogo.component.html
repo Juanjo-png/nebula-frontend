@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="gridCatalogo">
-        <div *ngFor="let libro of libros | paginate: { itemsPerPage: 10, currentPage: page }">
+        <div *ngFor="let libro of libros | paginate: { itemsPerPage: 20, currentPage: page }">
             <div class="libro">
                 <a routerLink="/libros/{{libro.id}}" routerLinkActive="active" class="dropdown-item" aria-current="page"
                     href="#">

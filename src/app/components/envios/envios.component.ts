@@ -18,36 +18,39 @@ import Swal from 'sweetalert2';
   styleUrl: './envios.component.css'
 })
 export class EnviosComponent implements OnInit{
-  envios: envio[] = [];
   private enviosService = inject(EnviosService);
+  envios: any[] = [];
   dtoptions: Config={};
   dttrigger: Subject<any>= new Subject<any>();
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.dtoptions = {
-      pagingType: 'full_numbers', 
-      pageLength: 10, 
-      lengthMenu: [10, 15, 20, 25], 
-    };
+  ngOnInit() {
+    this.dtoptions ={
+      pagingType: "full",
+      lengthMenu: [10,15,20,25]
+      
+    }
     this.enviosService.getEnvios().subscribe((envios: any) => {
       this.envios = envios;
+      this.dttrigger.next(null);
+      console.log(this.envios);
     });
   }
 
-  delete(id:any, index:any){
+  cancelar(id:any, index:any){
     Swal.fire({
       title: "¿Quieres cancelar el envio?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Eliminar"
+      confirmButtonColor: "#81689D",
+      cancelButtonColor: "#dd6161",
+      cancelButtonText: "No Cancelar",
+      confirmButtonText: "Cancelar Envio"
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: "¡¡Envio Eliminado!!",
+          title: "¡¡Envio Cancelado!!",
           icon: "success"
         });
         this.enviosService.cancelarEnvio(id).subscribe((res)=>{
@@ -55,7 +58,28 @@ export class EnviosComponent implements OnInit{
         })
       }
     });
-    
+  }
+
+  delete(id:any, index:any){
+    Swal.fire({
+      title: "¿Quieres eliminar el envio?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#81689D",
+      cancelButtonColor: "#dd6161",
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Eliminar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "¡¡Envio Eliminado!!",
+          icon: "success"
+        });
+        this.enviosService.deleteEnvio(id).subscribe((res)=>{
+          this.envios.splice(index,1)
+        })
+      }
+    });
   }
 
 }

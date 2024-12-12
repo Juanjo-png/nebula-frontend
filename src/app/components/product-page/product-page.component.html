@@ -41,12 +41,18 @@
         </div>
         <div class="generos">
             <h3>Etiquetas</h3>
-            <h4>{{libro.etiqueta}}</h4>
+            <h4 routerLink="/etiquetas/{{libro.id_Etiqueta}}">{{libro.etiqueta}}</h4>
         </div>
     </div>
     <div class="column">
         <div class="precio">
-            <button type="button" (click)="agregarCarrito(libro)" class="btn btn-danger"><i class="bi bi-cart"></i>AÑADIR AL CARRITO</button>
+            @if (usuario) {
+                <button type="button" (click)="agregarCarrito(libro)" class="btn btn-danger"><i class="bi bi-cart"></i>AÑADIR AL CARRITO</button>
+            }
+            @else {
+                <button type="button" routerLink="/login" class="btn btn-danger"><i class="bi bi-cart"></i>AÑADIR AL CARRITO</button>
+
+            }
             @if (libro.avance == 1) {
                 <button type="button" routerLink="/adelanto/{{libro.id}}" class="btn btn-danger"><i class="bi bi-book"></i>LEER AVANCE</button>
             }

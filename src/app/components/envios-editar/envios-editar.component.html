@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="card"><h1>Editar Envio</h1></div>
+<div class="contenedor">
+    <div class="titulo">
+        <div class="tituloh1">
+            <i class="bi bi-box2-fill"></i><h1>Editar Envio</h1><i class="bi bi-box2-fill"></i>
+        </div>
+        <p>Modifica la noticia seleccionada</p>
+    </div>
+    <app-envios-formulario
+            *ngIf = "model"
+            [modelEnvio]="model"
+            (submitValues)="onSubmit($event)"
+        ></app-envios-formulario>
+</div>
+<app-footer></app-footer>

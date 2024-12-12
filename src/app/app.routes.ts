@@ -134,6 +134,14 @@ export const routes: Routes = [
         loadComponent: () => import('./components/formas-pago/formas-pago.component').then(m => m.FormasPagoComponent)
     },
     {
+        path: 'envio-editar/:id',
+        loadComponent: () => import('./components/envios-editar/envios-editar.component').then(m => m.EnviosEditarComponent)
+    },
+    {
+        path: 'etiquetas/:id',
+        loadComponent: () => import('./components/libros-etiquetas/libros-etiquetas.component').then(m => m.LibrosEtiquetasComponent)
+    },
+    {
         path:'',
         redirectTo: '/home',
         pathMatch: 'full'

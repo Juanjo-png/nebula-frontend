@@ -38,4 +38,8 @@ export class EnviosService {
     return this.http.put(`${this.API_Envios}/cancelar/${id}`, {});
   }
 
+  deleteEnvio(id:any){
+    return this.http.delete(`${this.API_Envios}/${id}`);
+  }
+
 }

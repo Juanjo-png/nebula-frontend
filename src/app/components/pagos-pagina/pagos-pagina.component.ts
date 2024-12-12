@@ -63,11 +63,14 @@ export class PagosPaginaComponent implements OnInit{
     this.id = this.route.snapshot.paramMap.get('id') || '';
     this.form = this.fb.group({
       amount: ['', [Validators.required, Validators.min(1), Validators.max(100000)]],
-      direccion: ['', [Validators.required, Validators.minLength(5)]], // Añadido aquí
-      cardNumber: [false, [Validators.required, Validators.requiredTrue]], 
+      direccion: ['', [Validators.required, Validators.minLength(5)]],
+      codPostal: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(5)]],
+      comunidad: ['', [Validators.required]],
+      provincia: ['', [Validators.required]],
+      cardNumber: [false, [Validators.required, Validators.requiredTrue]],
       cardCvv: [false, [Validators.required, Validators.requiredTrue]],
       cardExp: [false, [Validators.required, Validators.requiredTrue]],
-    });
+    });    
 
     if (this.token) {
       this.tokenData = jwtDecode<TokenData>(this.token); 
@@ -163,57 +166,87 @@ export class PagosPaginaComponent implements OnInit{
 
   async initPay(): Promise<any> {
     try {
+      // Validar que todos los campos estén completos
+      const direccion = this.form.get("direccion")?.value;
+      const codigoPostal = this.form.get("codPostal")?.value;
+      const comunidad = this.form.get("comunidad")?.value;
+      const provincia = this.form.get("provincia")?.value;
+  
+      if (!direccion || !codigoPostal || !comunidad || !provincia) {
+        Swal.fire({
+          icon: "error",
+          title: "Datos incompletos",
+          text: "Por favor, completa todos los campos requeridos antes de proceder con el pago.",
+          showConfirmButton: true,
+        });
+        this.form.enable(); // Asegúrate de que el formulario permanezca editable
+        return; // Detenemos el flujo de pago
+      }
+  
+      // Desactivar el formulario mientras se realiza el pago
       this.form.disable();
-      //TODO: SDK de Stripe genera un TOKEN para la intencion de pago!
-      const {token} = await this.STRIPE.createToken(this.cardNumber)
-
-      //TODO: Enviamos el token a nuesta api donde generamos (stripe) un metodo de pago basado en el token
-      //TODO: tok_23213
-      const {data} = await this.pagosService.sendPayment(token.id, this.id)
-
-      //TODO: Nuestra api devolver un "client_secret" que es un token unico por intencion de pago
-      //TODO: SDK de stripe se encarga de verificar si el banco necesita autorizar o no
+  
+      // Generar un token con Stripe
+      const { token } = await this.STRIPE.createToken(this.cardNumber);
+  
+      // Enviar el token al backend
+      const { data } = await this.pagosService.sendPayment(token.id, this.id);
+  
+      // Manejar el pago con el client_secret recibido
       this.STRIPE.handleCardPayment(data.client_secret)
         .then(async () => {
-
-          //TODO: 👌 Money Money!!!
           Swal.fire({
             icon: "success",
-            title: "¡¡El pago se ha realizado con exito!!",
+            title: "¡Pago realizado con éxito!",
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
           });
-
-          let direccion = this.form.get("direccion")?.value
-
-          //TODO: Enviamos el id "localizador" de nuestra orden para decirle al backend que confirme con stripe si es verdad!
-          await this.pagosService.confirmOrder(this.id)
-          //Añadimos el envio y redirigimos
+  
+          // Confirmar la orden con Stripe
+          await this.pagosService.confirmOrder(this.id);
+  
+          // Crear el envío
           const envio: envio = {
             nombre: this.generarSecuenciaAleatoria(),
             direccion: direccion,
-            estado: "Enviado",
+            estado: "Empaquetando",
             productos: JSON.stringify(this.listaItemsCarrito),
-            usuario: Number(this.idUsuario)
+            usuario: Number(this.idUsuario),
+            codigoPostal: codigoPostal,
+            comunidad: comunidad,
+            provincia: provincia,
           };
+  
           this.enviosService.crearEnvio(envio).subscribe({
-            next:()=>{
+            next: () => {
               localStorage.removeItem("carrito");
               this.router.navigate(['/home']);
             },
-            error: (error) =>{
+            error: (error) => {
               console.log(error);
-            }
-          })
+            },
+          });
         })
         .catch(() => {
-          alert("error con el pago!!")
-        })
+          Swal.fire({
+            icon: "error",
+            title: "Error en el pago",
+            text: "Hubo un problema con el pago. Por favor, inténtalo de nuevo.",
+            showConfirmButton: true,
+          });
+          this.form.enable();
+        });
     } catch (e) {
-      alert("algo salió mal")
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Algo salió mal durante el proceso de pago. Por favor, inténtalo de nuevo.",
+        showConfirmButton: true,
+      });
+      this.form.enable();
     }
-
   }
+  
 
   onChangeCard({error}: any) {
     this.form.patchValue({cardNumber: !error});

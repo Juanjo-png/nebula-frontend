@@ -4,12 +4,12 @@
       <h2>Todos los Envios</h2>
     </div>
     <div class="divTabla">
-      <table class="table table-hover table-striped table-bordered dt-responsive nowrap" datatable [dtOptions]="dtoptions" [dtTrigger]="dttrigger">
+      <table  class="table table-hover table-striped table-bordered dt-responsive nowrap" datatable [dtOptions]="dtoptions" [dtTrigger]="dttrigger">
         <thead>
             <tr class="table-info">
                 <th>Productos</th>
                 <th>ID Envio</th>
-                <th class="esconder">Dirección</th>
+                <th class="esconder">Código Postal</th>
                 <th class="esconder">Usuario</th>
                 <th>Estado</th>
                 <th>Gestion</th>
@@ -24,8 +24,11 @@
                   </button>
                 </td>
                 <td>{{ envio.nombre }}</td>
-                <td class="esconder">{{ envio.direccion }}</td>
-                <td class="esconder">{{ envio.usuario }}</td>
+                <td class="esconder">{{ envio.codigoPostal}}</td>
+                <td class="esconder">{{ envio.nombre_usuario }}</td>
+                @if (envio.estado == "Empaquetando") {
+                  <td class="empaquetando">{{ envio.estado }}</td>
+                }
                 @if (envio.estado == "Enviado") {
                   <td class="enviado">{{ envio.estado }}</td>
                 }
@@ -38,11 +41,14 @@
                 
             <td>
               <div class="btn-group">
-                <button class="btn btn-primary boton">
+                <button class="btn btn-primary boton" routerLink="/envio-editar/{{envio.id}}">
                   <i class="bi bi-pencil-square"></i>
                 </button>
-                <button (click)="delete(envio.id, $index)" class="btn btn-danger boton">
+                <button (click)="cancelar(envio.id, $index)" class="btn btn-danger boton">
                   <i class="bi bi-trash-fill"></i>
+                </button>
+                <button (click)="delete(envio.id, $index)" class="btn btn-danger boton eliminar">
+                  <i class="bi bi-x-lg"></i>
                 </button>
               </div>
             </td>

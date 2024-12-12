@@ -24,6 +24,9 @@
                     </td>
                     <td>{{ envio.nombre }}</td>
                     <td>{{ envio.direccion }}</td>
+                    @if (envio.estado == "Empaquetando") {
+                      <td class="empaquetando">{{ envio.estado }}</td>
+                    }
                     @if (envio.estado == "Enviado") {
                       <td class="enviado">{{ envio.estado }}</td>
                     }

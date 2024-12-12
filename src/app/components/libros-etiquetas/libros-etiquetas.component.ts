@@ -5,40 +5,38 @@ import { HeaderComponent } from '../header/header.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
-import { CategoriasService } from '../../services/categorias.service';
+import { EtiquetasService } from '../../services/etiquetas.service';
 
 @Component({
-  selector: 'app-categorias',
+  selector: 'app-libros-etiquetas',
   standalone: true,
   imports: [HeaderComponent, RouterLink, RouterLinkActive, NgxPaginationModule, CommonModule, FooterComponent],
-  templateUrl: './categorias.component.html',
-  styleUrl: './categorias.component.css'
+  templateUrl: './libros-etiquetas.component.html',
+  styleUrl: './libros-etiquetas.component.css'
 })
-export class CategoriasComponent  implements OnInit{
+export class LibrosEtiquetasComponent implements OnInit{
   libros: any[] = [];
-  idLibro: string | null = null;
-  categoria: string = "";
-  categoriaID: number = 0;
+  idEtiqueta: string | null = null;
+  etiquetaNombre: string = "";
+  etiquetaID: number = 0;
   page: number = 1;
 
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private librosService = inject(LibrosService);
-  private categoriasService = inject(CategoriasService);
+  private etiquetasService = inject(EtiquetasService);
   private viewportScroller = inject(ViewportScroller)
-
-
 
   ngOnInit() {
     this.route.paramMap.subscribe(paramMap => {
-      this.idLibro = paramMap.get('id');
-      if (this.idLibro) {
-        this.librosService.getLibrosPorCategoria(this.idLibro).subscribe((libros: any) => {
+      this.idEtiqueta = paramMap.get('id');
+      if (this.idEtiqueta) {
+        this.librosService.getLibrosPorEtiqueta(this.idEtiqueta).subscribe((libros: any) => {
           this.libros = libros[0];
           console.log(libros);
         });
-        this.categoriasService.getCategoria(this.idLibro).subscribe((categorias: any) => {
-          this.categoria = categorias.nombre;
+        this.etiquetasService.getEtiqueta(this.idEtiqueta).subscribe((etiqueta: any) => {
+          this.etiquetaNombre = etiqueta.nombre;
         });
       }
     });

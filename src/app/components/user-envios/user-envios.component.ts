@@ -59,7 +59,13 @@ export class UserEnviosComponent implements OnInit{
             icon: "success"
           });
           this.enviosService.cancelarEnvio(id).subscribe((res)=>{
-            this.envios.splice(index,1)
+            this.idUsu = this.route.snapshot.paramMap.get('id');
+            if (this.idUsu) {
+              this.enviosService.getEnvioPorUsuario(this.idUsu).subscribe((data: any) => {
+                this.envios = data;
+                console.log(this.envios);
+              });
+            }
           })
         }
       });

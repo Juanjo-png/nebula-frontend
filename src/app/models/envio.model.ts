@@ -5,5 +5,8 @@ export interface envio {
     direccion: string;
     estado: string;
     productos: string;
-    usuario: number,
+    usuario: number;
+    codigoPostal: string;
+    comunidad: string;
+    provincia: string;
 }

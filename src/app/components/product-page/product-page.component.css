@@ -71,6 +71,11 @@
         box-shadow: -11px 10px 10px 1px rgba(196,196,196,1);
         width: 360px;
         height: auto;
+        transition: 0.2s;
+    }
+    img:hover {
+        transform: scale(1.05);  
+        transition: 0.2s;
     }
 }
 
@@ -115,6 +120,7 @@
 
 .generos{
     margin-top: 30px;
+    
 
     h3{
         margin-bottom: 20px;
@@ -122,6 +128,7 @@
     }
 
     h4{
+        cursor: pointer;
         color: black;
         background-color: #dddddd;
         padding: 10px;
