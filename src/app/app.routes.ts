@@ -142,13 +142,17 @@ export const routes: Routes = [
         loadComponent: () => import('./components/libros-etiquetas/libros-etiquetas.component').then(m => m.LibrosEtiquetasComponent)
     },
     {
+        path: 'error',
+        loadComponent: () => import('./components/error404/error404.component').then(m => m.Error404Component)
+    },
+    {
         path:'',
         redirectTo: '/home',
         pathMatch: 'full'
     },
     {
         path:'**',
-        redirectTo: '/home',
+        redirectTo: '/error',
         pathMatch: 'full'
      },
 ];
