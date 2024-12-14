@@ -14,7 +14,7 @@
     </div>
     <div class="gridCatalogo">
         @for (etiqueta of etiquetas; track $index) {
-            <div class="etiqueta">
+            <div class="etiqueta" routerLink="/etiquetas/{{etiqueta.id}}"> 
                 <h4>{{etiqueta.nombre}}</h4>
             </div>
         }
