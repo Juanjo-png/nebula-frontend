@@ -57,6 +57,12 @@
     padding: 0px;
     text-align: left;
 
+    .imagen{
+        img{
+            height: 100%;
+        }
+    }
+
     .contenido {
         padding: 20px;
     }
@@ -122,6 +128,7 @@
     margin: 0px;
     padding: 0px;
     width: 100%;
+    height: auto;
 
     .bloque {
         display: flex;
@@ -131,12 +138,14 @@
 
         img {
             width: 250px;
+            height: auto;
         }
     }
 
     .contenido {
         padding: 10px;
         text-align: left;
+        height: 100%;
 
         h4 {
             font-weight: 600;

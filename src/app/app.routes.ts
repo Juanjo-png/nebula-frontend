@@ -1,4 +1,8 @@
 import { Routes } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
+import { authGuard } from './utils/auth.guard';
+import { authUsuarioGuard } from './utils/auth-usuario.guard';
+import { authAdminGuard } from './utils/auth-admin.guard';
 
 export const routes: Routes = [
     {
@@ -11,11 +15,11 @@ export const routes: Routes = [
     },
     {
         path: 'login',
-        loadComponent: () => import('./components/login/login.component').then(m => m.LoginComponent)
+        loadComponent: () => import('./components/login/login.component').then(m => m.LoginComponent), canActivate:[authGuard]
     },
     {
         path: 'register',
-        loadComponent: () => import('./components/register/register.component').then(m => m.RegisterComponent)
+        loadComponent: () => import('./components/register/register.component').then(m => m.RegisterComponent), canActivate:[authGuard]
     },
     {
         path: 'userInfo',
@@ -23,15 +27,15 @@ export const routes: Routes = [
     },
     {
         path: 'libros-gestion',
-        loadComponent: () => import('./components/libros-gestion/libros-gestion.component').then(m => m.LibrosGestionComponent)
+        loadComponent: () => import('./components/libros-gestion/libros-gestion.component').then(m => m.LibrosGestionComponent), canActivate:[authAdminGuard]
     },
     {
         path: 'libros-crear',
-        loadComponent: () => import('./components/libros-crear/libros-crear.component').then(m => m.LibrosCrearComponent)
+        loadComponent: () => import('./components/libros-crear/libros-crear.component').then(m => m.LibrosCrearComponent), canActivate:[authAdminGuard]
     },
     {
         path: 'libros-editar/:id',
-        loadComponent: () => import('./components/libros-editar/libros-editar.component').then(m => m.LibrosEditarComponent)
+        loadComponent: () => import('./components/libros-editar/libros-editar.component').then(m => m.LibrosEditarComponent), canActivate:[authAdminGuard]
     },
     {
         path: 'catalogo',
@@ -55,7 +59,7 @@ export const routes: Routes = [
     },
     {
         path: 'usuario-editar/:id',
-        loadComponent: () => import('./components/usuarios-editar/usuarios-editar.component').then(m => m.UsuariosEditarComponent)
+        loadComponent: () => import('./components/usuarios-editar/usuarios-editar.component').then(m => m.UsuariosEditarComponent), canActivate:[authUsuarioGuard]
     },
     {
         path: 'pagina-pagos/:id',
@@ -75,7 +79,7 @@ export const routes: Routes = [
     },
     {
         path: 'envios',
-        loadComponent: () => import('./components/envios/envios.component').then(m => m.EnviosComponent)
+        loadComponent: () => import('./components/envios/envios.component').then(m => m.EnviosComponent), canActivate:[authAdminGuard]
     },
     {
         path: 'envios/:id',
@@ -87,7 +91,7 @@ export const routes: Routes = [
     },
     {
         path: 'contraseña-olvidada',
-        loadComponent: () => import('./components/contrasena-olvidada/contrasena-olvidada.component').then(m => m.ContrasenaOlvidadaComponent)
+        loadComponent: () => import('./components/contrasena-olvidada/contrasena-olvidada.component').then(m => m.ContrasenaOlvidadaComponent), canActivate:[authGuard]
     },
     {
         path: 'recuperar-contraseña/:id',
@@ -111,23 +115,23 @@ export const routes: Routes = [
     },
     {
         path: 'userInfo/:id',
-        loadComponent: () => import('./components/user-info/user-info.component').then(m => m.UserInfoComponent)
+        loadComponent: () => import('./components/user-info/user-info.component').then(m => m.UserInfoComponent), canActivate:[authUsuarioGuard]
     },
     {
         path: 'enviosUsuario/:id',
-        loadComponent: () => import('./components/user-envios/user-envios.component').then(m => m.UserEnviosComponent)
+        loadComponent: () => import('./components/user-envios/user-envios.component').then(m => m.UserEnviosComponent), canActivate:[authUsuarioGuard]
     },
     {
         path: 'noticias-gestion',
-        loadComponent: () => import('./components/noticias-gestion/noticias-gestion.component').then(m => m.NoticiasGestionComponent)
+        loadComponent: () => import('./components/noticias-gestion/noticias-gestion.component').then(m => m.NoticiasGestionComponent), canActivate:[authAdminGuard]
     },
     {
         path: 'noticia-crear',
-        loadComponent: () => import('./components/noticia-crear/noticia-crear.component').then(m => m.NoticiaCrearComponent)
+        loadComponent: () => import('./components/noticia-crear/noticia-crear.component').then(m => m.NoticiaCrearComponent), canActivate:[authAdminGuard]
     },
     {
         path: 'noticia-editar/:id',
-        loadComponent: () => import('./components/noticia-editar/noticia-editar.component').then(m => m.NoticiaEditarComponent)
+        loadComponent: () => import('./components/noticia-editar/noticia-editar.component').then(m => m.NoticiaEditarComponent), canActivate:[authAdminGuard]
     },
     {
         path: 'formas-pago',
@@ -135,7 +139,7 @@ export const routes: Routes = [
     },
     {
         path: 'envio-editar/:id',
-        loadComponent: () => import('./components/envios-editar/envios-editar.component').then(m => m.EnviosEditarComponent)
+        loadComponent: () => import('./components/envios-editar/envios-editar.component').then(m => m.EnviosEditarComponent), canActivate:[authAdminGuard]
     },
     {
         path: 'etiquetas/:id',

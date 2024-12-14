@@ -267,7 +267,11 @@
     }
 
     .textoNoticias{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding: 10px;
+        
         h2{
             font-size: 37.5px;
             font-weight: 600;
@@ -784,5 +788,7 @@
         flex-direction: column-reverse;
     }
 }
+
+
 
 

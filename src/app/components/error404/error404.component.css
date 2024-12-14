@@ -1,7 +1,16 @@
 .cuerpo{
-    margin-top: 50px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+
+    a{
+        color: blueviolet;
+    }
 }
 
 .imagen{
-    width: 800px;
+    width: 700px;
 }

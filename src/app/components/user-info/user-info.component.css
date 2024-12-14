@@ -85,7 +85,7 @@
     background-color: rgb(235, 79, 79);
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 575px){
     .cuerpo {
         margin-left: 7%;
         margin-right: 7%;
@@ -120,6 +120,13 @@
                 font-weight: 300;
             }
         }
+
+        .cerrarSesionData{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
     
         i {
             color: black;
@@ -152,3 +159,154 @@
     
     }
 }
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .cuerpo {
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    
+        .iconoPerfil {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .info {
+            margin-top: 30px;
+    
+            hr {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+    
+            .data {
+                margin-bottom: 0px;
+            }
+    
+            h4 {
+                font-weight: 600;
+            }
+    
+            p {
+                font-weight: 300;
+            }
+        }
+
+        .cerrarSesionData{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        i {
+            color: black;
+            font-size: 150px;
+        }
+    
+        .datosUsuario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .boton {
+            font-size: 18px;
+            margin-bottom: 0px;
+            padding: 12px;
+            width: 450px;
+            font-weight: 600;
+            align-items: center;
+            justify-content: center;
+        
+            i {
+                font-size: 35px;
+                color: white;
+                font-weight: 700;
+                margin-right: 10px;
+            }
+        }
+    
+    }
+}
+
+@media (min-width: 768px) and (max-width: 993px) {
+    .cuerpo {
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    
+        .iconoPerfil {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .info {
+            margin-top: 30px;
+    
+            hr {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+    
+            .data {
+                margin-bottom: 0px;
+            }
+    
+            h4 {
+                font-weight: 600;
+            }
+    
+            p {
+                font-weight: 300;
+            }
+        }
+
+        .cerrarSesionData{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        i {
+            color: black;
+            font-size: 150px;
+        }
+    
+        .datosUsuario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .boton {
+            font-size: 18px;
+            margin-bottom: 0px;
+            padding: 12px;
+            width: 450px;
+            font-weight: 600;
+            align-items: center;
+            justify-content: center;
+        
+            i {
+                font-size: 35px;
+                color: white;
+                font-weight: 700;
+                margin-right: 10px;
+            }
+        }
+    
+    }
+}
+

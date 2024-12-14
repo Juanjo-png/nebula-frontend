@@ -60,6 +60,9 @@ h2{
     td{
         text-align: center;
         vertical-align: middle;
+        width: 300px;
+        word-wrap: break-word;  
+        white-space: normal;
     }
 }
 

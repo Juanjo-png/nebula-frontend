@@ -72,7 +72,7 @@ export class RecuperarContrasenaComponent implements OnInit {
           this.usuarioService.updateUsuarioContra(this.usuarioId, usuarioActualizado).subscribe({
             next: (response) => {
               this.toastrService.success('Contraseña actualizada correctamente.');
-              this.router.navigate(['/usuarios']);
+              this.router.navigate(['/login']);
             },
             error: (err) => {
               console.error('Error al actualizar el usuario:', err);
