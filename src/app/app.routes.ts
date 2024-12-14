@@ -146,6 +146,10 @@ export const routes: Routes = [
         loadComponent: () => import('./components/libros-etiquetas/libros-etiquetas.component').then(m => m.LibrosEtiquetasComponent)
     },
     {
+        path: 'etiquetas-todas',
+        loadComponent: () => import('./components/etiquetas-todas/etiquetas-todas.component').then(m => m.EtiquetasTodasComponent)
+    },
+    {
         path: 'error',
         loadComponent: () => import('./components/error404/error404.component').then(m => m.Error404Component)
     },

@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="cuerpo">
+    <div class="menu">
+        <div class="breadcrumbs">
+            <h5>
+                <a href="#" class="mainBread" routerLink="/catalogo">Catalogo</a>
+                > 
+                Etiquetas
+            </h5>
+            <div class="ver">
+                <h3>ETIQUETAS</h3>
+            </div>
+        </div>
+    </div>
+    <div class="gridCatalogo">
+        @for (etiqueta of etiquetas; track $index) {
+            <div class="etiqueta">
+                <h4>{{etiqueta.nombre}}</h4>
+            </div>
+        }
+    </div>
+</div>
+<app-footer></app-footer>
