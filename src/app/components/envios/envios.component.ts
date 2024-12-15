@@ -56,7 +56,6 @@ export class EnviosComponent implements OnInit{
         this.enviosService.cancelarEnvio(id).subscribe((res)=>{
           this.enviosService.getEnvios().subscribe((envios: any) => {
             this.envios = envios;
-            this.dttrigger.next(null);
             console.log(this.envios);
           });
         })
