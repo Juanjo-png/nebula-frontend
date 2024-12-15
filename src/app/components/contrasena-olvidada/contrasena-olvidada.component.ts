@@ -36,7 +36,8 @@ export class ContrasenaOlvidadaComponent implements OnInit{
       if (usuario) {
         this.existeUsuario = 1;
         console.log(usuario);
-        this.router.navigate([`/recuperar-contraseña/${usuario[0].id}`]);
+        this.router.navigate([`/recuperar-contraseña/${usuario.id}`]);
+
       }
       else{
         this.toastrService.error("El usuario o la pregunta no coinciden")
