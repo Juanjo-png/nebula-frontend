@@ -200,12 +200,9 @@ i:hover{
 }
 
 @media only screen and (max-width: 575px){
-
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px){
     .titulo{
-        margin-left: 2%;
+        margin-top: 80px;
+        margin-left: 3%;
         margin-right: 2%;
     }
     .cuerpo{
@@ -213,9 +210,11 @@ i:hover{
         margin-left: 2%;
         margin-right: 2%;
         margin-bottom: 70px;
-        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
 
         .tabla{
             img{
@@ -228,7 +227,7 @@ i:hover{
                 padding-left: 0px;
                 padding-right: 0px;
                 margin: 0px;
-                width: 100px;
+                width: 2%;
                 word-wrap: break-word;  
                 white-space: normal;
             }
@@ -237,6 +236,83 @@ i:hover{
                 padding: 15px;
                 padding-left: 0px;
                 padding-right: 0px;
+                width: 2%;
+                font-weight: 400;
+            }
+
+            .cantidad{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-left: 50px;
+                padding-right: 5px;
+
+                .cantidadButton{
+                    width: min-content;
+                }
+            }
+        }
+
+        .comprar{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .titulo{
+        margin-top: 80px;
+        margin-left: 3%;
+        margin-right: 2%;
+    }
+    .cuerpo{
+        font-size: 70%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+
+        .tabla{
+            img{
+                width: 40%;
+            }
+
+            .cantidad{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 5%;
+                padding-left: 46%;
+                padding-right: 5px;
+
+                .cantidadButton{
+                    width: min-content;
+                }
+            }
+
+            td{
+                align-items: center;
+                padding: 15px;
+                font-weight: 600;
+                padding-left: 0px;
+                padding-right: 0px;
+                margin: 0px;
+                width: 5%;
+                word-wrap: break-word;  
+                white-space: normal;
+            }
+            th{
+                color: grey;
+                padding: 15px;
+                padding-left: 0px;
+                padding-right: 0px;
+                width: 5%;
                 font-weight: 400;
             }
         }
@@ -248,6 +324,65 @@ i:hover{
 }
 
 @media (min-width: 768px) and (max-width: 993px) {
+    .titulo{
+        margin-top: 80px;
+        margin-left: 3%;
+        margin-right: 2%;
+    }
+    .cuerpo{
+        font-size: 80%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
 
+        .tabla{
+            img{
+                width: 40%;
+            }
+
+            .cantidad{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 5%;
+                padding-left: 46%;
+                padding-right: 5px;
+
+                .cantidadButton{
+                    width: min-content;
+                }
+            }
+
+            td{
+                align-items: center;
+                padding: 15px;
+                font-weight: 600;
+                padding-left: 0px;
+                padding-right: 0px;
+                margin: 0px;
+                width: 5%;
+                word-wrap: break-word;  
+                white-space: normal;
+            }
+            th{
+                color: grey;
+                padding: 15px;
+                padding-left: 0px;
+                padding-right: 0px;
+                width: 5%;
+                font-weight: 400;
+            }
+        }
+
+        .comprar{
+            width: 100%;
+        }
+    }
 }
 

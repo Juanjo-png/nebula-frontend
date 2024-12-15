@@ -150,6 +150,14 @@ export const routes: Routes = [
         loadComponent: () => import('./components/etiquetas-todas/etiquetas-todas.component').then(m => m.EtiquetasTodasComponent)
     },
     {
+        path: 'acerca',
+        loadComponent: () => import('./components/acerca/acerca.component').then(m => m.AcercaComponent)
+    },
+    {
+        path: 'cookies',
+        loadComponent: () => import('./components/privacidad-cookies/privacidad-cookies.component').then(m => m.PrivacidadCookiesComponent)
+    },
+    {
         path: 'error',
         loadComponent: () => import('./components/error404/error404.component').then(m => m.Error404Component)
     },
