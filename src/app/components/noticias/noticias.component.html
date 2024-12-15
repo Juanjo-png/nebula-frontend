@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="titulo">
-    <h4>ACTUALIDAD</h4>
-    <h3>NOTICIAS</h3>
+    <h4>{{"ACTUALIDAD" | translate}}</h4>
+    <h3>{{"NOTICIAS" | translate}}</h3>
 </div>
 <div class="cuerpo">
     <div class="row1">
@@ -13,7 +13,7 @@
                 <h4>{{this.noticias[0].titulo}}</h4>
                 <h6>{{this.noticias[0].fecha}}</h6>
                 <p>{{this.noticias[0].extracto}}</p>
-                <a href="#" routerLink="/noticias/{{this.noticias[0].id}}">Leer mas...</a>
+                <a href="#" routerLink="/noticias/{{this.noticias[0].id}}">{{"Leer mas..." | translate}}</a>
             </div>
         </div>
     </div>

@@ -13,10 +13,24 @@
     .iconoPerfil {
         text-align: center;
         margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         h3 {
+            padding: 10px;
+            padding-left: 28px;
+            padding-right: 28px;
             font-weight: 700;
             font-size: 50px;
+            color: white;
+            background-color: #1F2544;
+            width: min-content;
+        }
+
+        i{
+            color: #1F2544;
         }
     }
 

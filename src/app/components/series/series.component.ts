@@ -5,16 +5,16 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FooterComponent } from '../footer/footer.component';
 import { SeriesService } from '../../services/series.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-series',
   standalone: true,
-  imports: [HeaderComponent, RouterLink, RouterLinkActive, NgxPaginationModule, CommonModule, FooterComponent],
+  imports: [HeaderComponent, RouterLink, RouterLinkActive, NgxPaginationModule, CommonModule, FooterComponent, TranslateModule],
   templateUrl: './series.component.html',
   styleUrl: './series.component.css'
 })
 export class SeriesComponent implements OnInit{
-  constructor(private router: Router) {}
   private seriesService = inject(SeriesService);
   private viewportScroller = inject(ViewportScroller);
   series: any[] = [];
@@ -23,6 +23,18 @@ export class SeriesComponent implements OnInit{
   page: number = 1;
   noVolumenes: number = 0;
   categoria: string = "";
+
+  constructor(private router: Router, private translate: TranslateService) {
+    // Verificar si hay un idioma almacenado en localStorage
+    const savedLanguage = localStorage.getItem('appLanguage');
+    if (savedLanguage) {
+      this.translate.use(savedLanguage); // Usa el idioma almacenado
+    } else {
+      this.translate.setDefaultLang('es'); // Configura un idioma predeterminado
+      this.translate.use('es'); // Usa el idioma predeterminado
+      localStorage.setItem('appLanguage', 'es'); // Guarda el idioma predeterminado
+    }
+  }
 
   ngOnInit() {
     this.viewportScroller.scrollToPosition([0, 0]);

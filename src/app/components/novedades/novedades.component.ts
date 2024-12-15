@@ -4,11 +4,12 @@ import { LibrosService } from '../../services/libros.service';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from "../footer/footer.component";
 import { CategoriasService } from '../../services/categorias.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-novedades',
   standalone: true,
-  imports: [HeaderComponent, RouterLink, RouterLinkActive, FooterComponent],
+  imports: [HeaderComponent, RouterLink, RouterLinkActive, FooterComponent, TranslateModule],
   templateUrl: './novedades.component.html',
   styleUrl: './novedades.component.css'
 })
@@ -30,6 +31,18 @@ export class NovedadesComponent implements OnInit{
   private route = inject(ActivatedRoute);
   private librosService = inject(LibrosService);
   private categoriasService = inject(CategoriasService);
+
+  constructor(private translate: TranslateService) {
+    // Verificar si hay un idioma almacenado en localStorage
+    const savedLanguage = localStorage.getItem('appLanguage');
+    if (savedLanguage) {
+      this.translate.use(savedLanguage); // Usa el idioma almacenado
+    } else {
+      this.translate.setDefaultLang('es'); // Configura un idioma predeterminado
+      this.translate.use('es'); // Usa el idioma predeterminado
+      localStorage.setItem('appLanguage', 'es'); // Guarda el idioma predeterminado
+    }
+  }
 
 
   ngOnInit() {

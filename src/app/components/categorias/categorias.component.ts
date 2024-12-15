@@ -6,11 +6,12 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
 import { CategoriasService } from '../../services/categorias.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-categorias',
   standalone: true,
-  imports: [HeaderComponent, RouterLink, RouterLinkActive, NgxPaginationModule, CommonModule, FooterComponent],
+  imports: [HeaderComponent, RouterLink, RouterLinkActive, NgxPaginationModule, CommonModule, FooterComponent, TranslateModule],
   templateUrl: './categorias.component.html',
   styleUrl: './categorias.component.css'
 })
@@ -26,6 +27,18 @@ export class CategoriasComponent  implements OnInit{
   private librosService = inject(LibrosService);
   private categoriasService = inject(CategoriasService);
   private viewportScroller = inject(ViewportScroller)
+
+  constructor(private translate: TranslateService) {
+    // Verificar si hay un idioma almacenado en localStorage
+    const savedLanguage = localStorage.getItem('appLanguage');
+    if (savedLanguage) {
+      this.translate.use(savedLanguage); // Usa el idioma almacenado
+    } else {
+      this.translate.setDefaultLang('es'); // Configura un idioma predeterminado
+      this.translate.use('es'); // Usa el idioma predeterminado
+      localStorage.setItem('appLanguage', 'es'); // Guarda el idioma predeterminado
+    }
+  }
 
 
 

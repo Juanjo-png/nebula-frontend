@@ -3,19 +3,19 @@
     <div class="menu">
         <div class="breadcrumbs">
             <h5>
-                <a href="#" routerLink="/categoria/{{this.idLibro}}" class="mainBread">{{this.categoria}}</a>
+                <a href="#" routerLink="/categoria/{{this.idLibro}}" class="mainBread">{{this.categoria | translate}}</a>
                 > 
-                <a href="#">NOVEDADES</a>
+                <a href="#">{{"NOVEDADES" | translate}}</a>
             </h5>
             <div class="ver">
-                <h3>NOVEDADES</h3>
+                <h3>{{"NOVEDADES" | translate}}</h3>
             </div>
         </div>
     </div>
     <div class="novedades">
         <div class="mes">
             <div class="tituloMes">
-                <h3>OCTUBRE</h3>
+                <h3>{{"OCTUBRE" | translate}}</h3>
             </div>
             <div class="grid">
                 @for (libro of primero; track $index) {
@@ -37,7 +37,7 @@
         </div>
         <div class="mes">
             <div class="tituloMes">
-                <h3>NOVIEMBRE</h3>
+                <h3>{{"NOVIEMBRE" | translate}}</h3>
             </div>
             <div class="grid">
                 @for (libro of segundo; track $index) {
@@ -59,7 +59,7 @@
         </div>
         <div class="mes">
             <div class="tituloMes">
-                <h3>DICIEMBRE</h3>
+                <h3>{{"DICIEMBRE" | translate}}</h3>
             </div>
             <div class="grid">
                 @for (libro of tercero; track $index) {
