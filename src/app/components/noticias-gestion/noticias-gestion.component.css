@@ -77,10 +77,17 @@ h2{
 @media only screen and (max-width: 575px){
     .contenedor{
         margin-left: 5%;
+        margin-top: 20%;
         margin-right: 5%;
+    }
+
+
+    .crearLibro{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     .divTabla{
@@ -88,10 +95,6 @@ h2{
         margin-right: 0%;
         text-align: left;
         font-size: 12px;
-        
-        .esconder{
-            display: none;
-        }
 
         td{
             font-size: 12px;
@@ -99,11 +102,6 @@ h2{
 
         th{
             font-size: 12px;
-        }
-
-        .row .mt-2 .justify-content-between{
-            display: flex;
-            border: 1px solid black;
         }
     }
 }
@@ -111,10 +109,16 @@ h2{
 @media only screen and (min-width: 576px) and (max-width: 767px){
     .contenedor{
         margin-left: 5%;
+        margin-top: 20%;
         margin-right: 5%;
+    }
+
+    .crearLibro{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     .divTabla{
@@ -133,11 +137,6 @@ h2{
 
         th{
             font-size: 12px;
-        }
-
-        .row .mt-2 .justify-content-between{
-            display: flex;
-            border: 1px solid black;
         }
     }
 }

@@ -45,10 +45,6 @@ h2{
 .divTabla{
     text-align: center;
 
-    table{
-        table-layout: fixed;
-    }
-
     th{
         text-align: center;
         background-color: #19225c;
@@ -59,7 +55,6 @@ h2{
     td{
         text-align: center;
         vertical-align: middle;
-        width: 300px;
         word-wrap: break-word;  
         white-space: normal;
     }
@@ -73,23 +68,103 @@ h2{
     }
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 575px){
     .contenedor{
         margin-left: 5%;
+        margin-top: 20%;
         margin-right: 5%;
-        margin-top: 100px;
+    }
+
+    .crearLibro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .divTabla{
         margin-left: 0%;
         margin-right: 0%;
+        text-align: left;
+        font-size: 12px;
+        overflow-x: scroll;
+
+        td{
+            font-size: 12px;
+        }
+
+        th{
+            font-size: 12px;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .contenedor{
+        margin-left: 5%;
+        margin-top: 20%;
+        margin-right: 5%;
+    }
+
+    .crearLibro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .divTabla{
+        margin-left: 0%;
+        margin-right: 0%;
+        text-align: left;
+        font-size: 12px;
         
         .esconder{
             display: none;
         }
 
-       th{
-        width: fit-content;
-       }
+        td{
+            font-size: 12px;
+        }
+
+        th{
+            font-size: 12px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 993px) {
+    .contenedor{
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divTabla{
+        margin-left: 0%;
+        margin-right: 0%;
+        text-align: left;
+        font-size: 12px;
+        
+        .esconder{
+            display: none;
+        }
+
+        td{
+            font-size: 12px;
+        }
+
+        th{
+            font-size: 12px;
+        }
+
+        .row .mt-2 .justify-content-between{
+            display: flex;
+            border: 1px solid black;
+        }
     }
 }

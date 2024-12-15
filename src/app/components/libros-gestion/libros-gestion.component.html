@@ -11,10 +11,10 @@
         <thead>
           <tr class="table-info">
             <th>Título</th>
-            <th class="esconder">Categoría</th>
-            <th class="esconder">Etiqueta</th>
+            <th >Categoría</th>
+            <th>Etiqueta</th>
             <th>Precio</th>
-            <th class="esconder">ISBN</th>
+            <th>ISBN</th>
             <th>Serie</th>
             <th>Portada</th>
             <th>Gestion</th>
@@ -24,10 +24,10 @@
           @for (libro of libros; track $index) {
             <tr>
             <td>{{ libro.titulo }}</td>
-            <td class="esconder">{{ libro.categoria }}</td>
-            <td class="esconder">{{ libro.etiqueta }}</td>
+            <td>{{ libro.categoria }}</td>
+            <td>{{ libro.etiqueta }}</td>
             <td>{{ libro.precio }}€</td>
-            <td class="esconder">{{ libro.ISBN }}</td>
+            <td>{{ libro.ISBN }}</td>
             <td>{{ libro.serie }}</td>
             <td><img [src]="libro.portada" alt="Portada" class="imagenPortada"></td>
             <td>
