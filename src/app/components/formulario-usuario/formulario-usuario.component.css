@@ -190,10 +190,11 @@ label{
     background-color: #d2d1d1;
   }
 
-  @media (max-width: 700px) {
+  @media only screen and (max-width: 575px){
     .wrapper{
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 0%;
+        margin-right: 0%;
+
 
         .inputContra{
             width: 100%;
@@ -206,6 +207,75 @@ label{
         .fila{
             margin: 0px;
             padding: 0px;
+            padding-right: 10px;
+        }
+
+        .contraseñas{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputContra{
+            margin: 0px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    }
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px){
+    .wrapper{
+        margin-left: 5%;
+        margin-right: 5%;
+
+
+        .inputContra{
+            width: 100%;
+        }
+
+        .body{
+            margin-left: 10px;
+        }
+
+        .fila{
+            margin: 0px;
+            padding: 0px;
+            padding-right: 10px;
+        }
+
+        .contraseñas{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputContra{
+            margin: 0px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 993px) {
+    .wrapper{
+        margin-left: 10%;
+        margin-right: 10%;
+
+
+        .inputContra{
+            width: 100%;
+        }
+
+        .body{
+            margin-left: 10px;
+        }
+
+        .fila{
+            margin: 0px;
+            padding: 0px;
+            padding-right: 10px;
         }
 
         .contraseñas{

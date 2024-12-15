@@ -4,8 +4,9 @@
       <img class="logo" src="../../../assets/img/otros/NebulaLogoBlack.png" alt="img login">
     </div>        
     <div class="body">
-      <h3>Actualizar Contraseña</h3>
-      
+      <div class="fila">
+        <h3>Actualizar Contraseña</h3>
+      </div>
       <form [formGroup]="formActualizar" (ngSubmit)="onSubmit()">
         <div class="contraseñas">
           <div class="fila">
@@ -24,7 +25,7 @@
           </div>
         </div>
 
-        <div class="d-grid gap-2 mb-3">
+        <div class="d-grid gap-2 mb-3 fila">
           <button [disabled]="!formActualizar.valid" type="submit" class="iniciarBoton">Actualizar</button>
         </div>
 

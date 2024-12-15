@@ -4,7 +4,9 @@
         <img class="logo" src="../../../assets/img/otros/NebulaLogoBlack.png" alt="img login">
       </div>        
       <div class="body">
-        <h3>Editar Datos de Usuario</h3>
+        <div class="fila">
+          <h3>Editar Datos de Usuario</h3>
+        </div>
         
         <form [formGroup]="formUsuarios" (ngSubmit)="onSubmit()">
           <div class="fila">
@@ -21,7 +23,7 @@
             </div>
           </div>
   
-          <div class="d-grid gap-2 mb-3">
+          <div class="d-grid gap-2 mb-3 fila">
             <button [disabled]="!formUsuarios.valid" type="submit" class="iniciarBoton">Registrar</button>
           </div>
   
