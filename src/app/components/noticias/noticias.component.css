@@ -90,7 +90,7 @@
 
 .row2 {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -99,10 +99,11 @@
         display: flex;
         flex-direction: column;
         gap: 0px;
-        width: min-content;
+        width: 33%;
 
         img {
-            width: 340px;
+            width: 100%;
+            height: auto;
         }
 
         .contenido {
@@ -124,7 +125,7 @@
 
 .row3 {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -134,10 +135,10 @@
         display: flex;
         gap: 0px;
         flex-direction: column;
-        width: min-content;
+        width: 25%;
 
         img {
-            width: 250px;
+            width: 100%;
             height: auto;
         }
     }
