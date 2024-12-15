@@ -87,8 +87,8 @@
 
 @media only screen and (max-width: 575px){
     .cuerpo {
-        margin-left: 7%;
-        margin-right: 7%;
+        margin-left: 0%;
+        margin-right: 0%;
         margin-top: 80px;
         margin-bottom: 20px;
     
@@ -110,6 +110,7 @@
     
             .data {
                 margin-bottom: 0px;
+                width: 100%;
             }
     
             h4 {
@@ -144,7 +145,7 @@
             font-size: 18px;
             margin-bottom: 0px;
             padding: 12px;
-            width: 450px;
+            width: 100%;
             font-weight: 600;
             align-items: center;
             justify-content: center;
