@@ -258,7 +258,7 @@ label{
     }
   }
 
-  @media (min-width: 768px) and (max-width: 993px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     .wrapper{
         margin-left: 10%;
         margin-right: 10%;

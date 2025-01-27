@@ -310,7 +310,7 @@ i:hover{
 }
 
 /*Pantallas medianas*/
-@media (min-width: 768px) and (max-width: 993px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .barraBusqueda{
         width: 100%;
     }

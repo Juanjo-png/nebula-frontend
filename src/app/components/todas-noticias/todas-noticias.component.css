@@ -199,7 +199,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 993px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .titulo{
         margin-left: 5%;
         margin-right: 5%;

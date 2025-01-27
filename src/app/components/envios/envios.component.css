@@ -88,7 +88,7 @@ h2{
     font-weight: 700;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
 
     .contenedor{
         margin-left: 5%;
