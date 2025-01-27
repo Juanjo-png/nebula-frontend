@@ -673,7 +673,7 @@
 }
 
 /*Portatil*/
-@media (min-width: 768px) and (max-width: 993px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .carruselBox{
         width:fit-content;
         margin: 0px;
